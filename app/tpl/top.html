@@ -1,0 +1,27 @@
+
+<div class="top">
+
+    <div class="top-bar">
+
+        <router-link to="/">
+            <img src="../img/home1.png" />
+        </router-link>
+
+        <p>{{page}}</p>
+        <a class="right" v-on:click="topFun()">
+            <img src="../img/other1.png" />
+        </a>
+    </div>
+    
+    <div class="top-cont bg-box" v-if = "topShow">
+
+        <div class="login-box">
+        <p> 
+            <router-link to="/one">
+                one
+            </router-link>
+        </p>   
+        </div>      
+    </div>
+</div>
+
