@@ -1,7 +1,7 @@
 module.exports = function(Vue){
 
 	let data = {
-		page:"H5 Game"
+		page:"我的萌宠"
 	}
 
 	let toptpl = require("./tpl/top.html");
@@ -27,7 +27,7 @@ module.exports = function(Vue){
 	// 注册组件my-footer
 	Vue.component("my-footer",{
 
-		template: '<footer class="footer"><p><span style="color:dodgerblue">北京微</span> h5 Game</p><p> <span style="color:deeppink"> @ </span><span style="color:aquamarine">by</span> Wbg</p><p style="font-size:.8rem;">2012- <span style="color:hotpink">2018</span></p><p><span style="color:darkturquoise">h5</span> game All Rights Reserved</p></footer>'
+		template: '<footer class="footer"><p><span style="color:dodgerblue">BJ-</span>cat</p><p> <span style="color:#f590a8"> 合作：</span><span style="color:#f590a8">微博</span>@我的萌宠</p><p style="font-size:.8rem;">2012- <span style="color:hotpink">2018</span></p><p><span style="color:darkturquoise">我的</span> 萌宠 All Rights Reserved</p></footer>'
 	})
 
 }

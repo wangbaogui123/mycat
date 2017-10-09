@@ -7,17 +7,17 @@
 	line-height: 3rem;
 	background-color: #fcfcfc;
 	z-index:100;
+	border-bottom: 1px solid #ffeadf;
 }
 .top .top-bar{
-	box-shadow: 1px 3px 5px #ccc;
 	height: 3rem;
 	background: rgba(255,255,255,0.8);
 }
 .top .top-bar a{
 	display: block;
-	width: 1.6rem;
-	height: 1.6rem;
-	margin: 0.7rem 1rem;
+	width: 1.4rem;
+	height: 1.4rem;
+	margin: 0.8rem 1rem;
 	float: left;
 }
 .top .top-bar a img{
@@ -35,11 +35,10 @@
 	width: 5rem;
 	height: 3rem;
 	margin: 0 auto;
-	color: #a6b1b0;
-	font-size: .9rem;
+	color: #f590a8;
+	font-size: 1rem;
 	left: 50%;
 	margin-left:-2.5rem; 
-	text-shadow: 2px 2px 2px #ccc;
 }
 .top .top-cont{
 	width: 98%;

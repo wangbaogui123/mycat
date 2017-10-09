@@ -1,4 +1,4 @@
-.box{padding-bottom:0; }
+.box{padding-bottom:0; box-shadow: 1px 3px 5px #ccc;background: #fff;}
 .mint-swipe,.mint-swipe-items-wrap{overflow:hidden;position:relative;height:100%}
 .mint-swipe-items-wrap>div{position:absolute;-webkit-transform:translateX(-100%);
 transform:translateX(-100%);width:100%;height:auto;display:none}
@@ -7,11 +7,10 @@ transform:translateX(-100%);width:100%;height:auto;display:none}
 .mint-swipe-indicator{width:8px;height:8px;display:inline-block;border-radius:100%;background:#000;opacity:.2;margin:0 3px}
 .mint-swipe-indicator.is-active{background:#fff}
 .my-swipe {
-    height: 12rem;
+    height: 20rem;
     color: #fff;
     font-size: 30px;
     text-align: center;
-    box-shadow:0 0 2px 2px #ccc;
     background: #fff;
 }
 .my-swipe a{

@@ -4,7 +4,6 @@ import axios from 'axios'
 import VueRouter from 'vue-router'
 import canvasone from './canvasone'
 import { Swipe, SwipeItem } from 'vue-swipe'
-// import VLink from './components/VLink.vue'
 
 Vue.prototype.$ajax = axios
 
@@ -21,7 +20,6 @@ Vue.use(canvasone);
 
 const routes = routers();
 
-console.log(routes)
 const router = new VueRouter({
 	routes // （缩写）相当于 routes: routes
 })
@@ -38,17 +36,9 @@ const app = new Vue({
 		topshow:false    
 	},
 	computed:{
-		// ViewComponent () {
 
-		// 	const matchingView = routes[this.currentRoute]
-		// 	return matchingView
-		// 		? require('./views/' + matchingView + '.vue')
-		// 		: require('./views/404.vue')
-		// }
 	},
-	// render (h) {
-	// 	return h(this.ViewComponent)
-	// },
+
 	methods:{
 		com_Ajax(obj,success,error){
 			this.$ajax(obj).then(function(data){
