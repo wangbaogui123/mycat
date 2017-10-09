@@ -3,11 +3,12 @@
 
     <div>
         <my-top :top-show="topshow"></my-top>
-    
+
         <div class="box">
+            <div class="datail-top">来自-我的萌宠推荐 铲屎官<a target="_blank" :href="data.user.weiboUrl">{{data.user.nickname}}</a></div>
             <div class="detail-home">  
-                <p>来自-我的萌宠推荐 铲屎官<a href=""></a></p>  
-                <p>{{title}}</p>
+                  
+                <p>{{data.title}}</p>
             </div>
         </div>
 
@@ -18,6 +19,16 @@
 
 </template>
 <style>
+    .datail-top{
+        margin: .3rem 0;
+        box-shadow: 0px 0px 1px #ccc;
+        height: 2rem;
+        line-height: 2rem;
+        font-size: .8rem;
+        text-align: left;
+        text-indent: 1rem;
+        background: rgba(245, 144, 168, 0.5);
+    }
     .detail-home{
         padding: 1rem 0;
         color: #333;
@@ -30,7 +41,9 @@
 
     var homeData = {
             
-            title:"",
+            data:{
+                user:{}
+            }
             
         }
 
@@ -54,7 +67,7 @@
                 for(var i = 0; i < data.length; i++){
 
                     if(data[i].id == id){
-                        _this.title = data[i].title;
+                        _this.data = data[i];
                         return ;
                     }
                 }

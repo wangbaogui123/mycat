@@ -484,13 +484,26 @@ Object.defineProperty(exports, "__esModule", {
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 __webpack_require__(52);
 
 var homeData = {
 
-    title: ""
+    data: {
+        user: {}
+    }
 
 };
 
@@ -514,7 +527,7 @@ exports.default = {
             for (var i = 0; i < data.length; i++) {
 
                 if (data[i].id == id) {
-                    _this.title = data[i].title;
+                    _this.data = data[i];
                     return;
                 }
             }
@@ -536,7 +549,7 @@ exports = module.exports = __webpack_require__(2)(undefined);
 
 
 // module
-exports.push([module.i, "\n.detail-home{\n    padding: 1rem 0;\n    color: #333;\n}\n", ""]);
+exports.push([module.i, "\n.datail-top{\n    margin: .3rem 0;\n    box-shadow: 0px 0px 1px #ccc;\n    height: 2rem;\n    line-height: 2rem;\n    font-size: .8rem;\n    text-align: left;\n    text-indent: 1rem;\n    background: rgba(245, 144, 168, 0.5);\n}\n.detail-home{\n    padding: 1rem 0;\n    color: #333;\n}\n", ""]);
 
 // exports
 
@@ -554,15 +567,16 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
   }), _vm._v(" "), _c('div', {
     staticClass: "box"
   }, [_c('div', {
-    staticClass: "detail-home"
-  }, [_vm._m(0), _vm._v(" "), _c('p', [_vm._v(_vm._s(_vm.title))])])]), _vm._v(" "), _c('my-footer')], 1)
-},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('p', [_vm._v("来自-我的萌宠推荐 铲屎官"), _c('a', {
+    staticClass: "datail-top"
+  }, [_vm._v("来自-我的萌宠推荐 铲屎官"), _c('a', {
     attrs: {
-      "href": ""
+      "target": "_blank",
+      "href": _vm.data.user.weiboUrl
     }
-  })])
-}]}
+  }, [_vm._v(_vm._s(_vm.data.user.nickname))])]), _vm._v(" "), _c('div', {
+    staticClass: "detail-home"
+  }, [_c('p', [_vm._v(_vm._s(_vm.data.title))])])]), _vm._v(" "), _c('my-footer')], 1)
+},staticRenderFns: []}
 module.exports.render._withStripped = true
 if (false) {
   module.hot.accept()
