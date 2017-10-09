@@ -4,6 +4,7 @@ import axios from 'axios'
 import VueRouter from 'vue-router'
 import canvasone from './canvasone'
 import { Swipe, SwipeItem } from 'vue-swipe'
+import lazyload from './lazyLoad'
 
 Vue.prototype.$ajax = axios
 
@@ -16,7 +17,7 @@ require('./component.js')(Vue)
 
 Vue.use(VueRouter);
 Vue.use(canvasone);
-
+Vue.use(lazyload);
 
 const routes = routers();
 

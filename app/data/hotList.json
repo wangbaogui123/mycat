@@ -2,7 +2,7 @@
     {
         "id":"1",
         "likes_count":60,
-        "images":["../img/cat/1/img1.jpg","../img/cat/1/img2.jpg","../img/cat/1/img3.jpg","../img/cat/1/img4.jpg","../img/cat/1/img5.jpg","../img/cat/1/img6.jpg"],
+        "images":["./app/img/cat/1/img1.jpg","./app/img/cat/1/img2.jpg","./app/img/cat/1/img3.jpg","./app/img/cat/1/img4.jpg","./app/img/cat/1/img5.jpg","./app/img/cat/1/img6.jpg"],
         "title":"我大王就是这么萌啊～～～",
         "user":{
             "avatar":"http://tvax1.sinaimg.cn/crop.0.4.751.751.180/e81aaa01ly8fguvwp3v90j20kv0l30tq.jpg",

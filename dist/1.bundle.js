@@ -1,18 +1,18 @@
 webpackJsonp([1],{
 
-/***/ 46:
+/***/ 48:
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(65)
+  __webpack_require__(67)
 }
-var Component = __webpack_require__(49)(
+var Component = __webpack_require__(51)(
   /* script */
-  __webpack_require__(54),
+  __webpack_require__(56),
   /* template */
-  __webpack_require__(63),
+  __webpack_require__(65),
   /* styles */
   injectStyle,
   /* scopeId */
@@ -45,7 +45,7 @@ module.exports = Component.exports
 
 /***/ }),
 
-/***/ 49:
+/***/ 51:
 /***/ (function(module, exports) {
 
 /* globals __VUE_SSR_CONTEXT__ */
@@ -143,7 +143,7 @@ module.exports = function normalizeComponent (
 
 /***/ }),
 
-/***/ 50:
+/***/ 52:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -180,7 +180,7 @@ module.exports = function listToStyles(parentId, list) {
 
 /***/ }),
 
-/***/ 51:
+/***/ 53:
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(2)(undefined);
@@ -195,13 +195,13 @@ exports.push([module.i, ".box{padding-bottom:0; box-shadow: 1px 3px 5px #ccc;bac
 
 /***/ }),
 
-/***/ 52:
+/***/ 54:
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(51);
+var content = __webpack_require__(53);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // Prepare cssTransformation
 var transform;
@@ -227,7 +227,7 @@ if(false) {
 
 /***/ }),
 
-/***/ 53:
+/***/ 55:
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -246,7 +246,7 @@ if (typeof DEBUG !== 'undefined' && DEBUG) {
   ) }
 }
 
-var listToStyles = __webpack_require__(50)
+var listToStyles = __webpack_require__(52)
 
 /*
 type StyleObject = {
@@ -449,7 +449,7 @@ function applyToTag (styleElement, obj) {
 
 /***/ }),
 
-/***/ 54:
+/***/ 56:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -499,9 +499,27 @@ Object.defineProperty(exports, "__esModule", {
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
-__webpack_require__(52);
+__webpack_require__(54);
 
 var homeData = {
 
@@ -545,7 +563,7 @@ exports.default = {
 
 /***/ }),
 
-/***/ 58:
+/***/ 60:
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(2)(undefined);
@@ -553,14 +571,14 @@ exports = module.exports = __webpack_require__(2)(undefined);
 
 
 // module
-exports.push([module.i, "\n.datail-top{\n    margin: .3rem 0;\n    box-shadow: 0px 0px 1px #ccc;\n    height: 2rem;\n    line-height: 2rem;\n    font-size: .7rem;\n    text-align: left;\n    text-indent: 1rem;\n    background: rgba(245, 144, 168, 0.5);\n    color: #333;\n}\n.datail-top a{\n    color: #fa7ca3;\n}\n.detail-home{\n    padding: 1rem 0;\n    color: #333;\n}\n", ""]);
+exports.push([module.i, "\n.datail-top{\n    margin: .3rem 0;\n    box-shadow: 0px 0px 1px #ccc;\n    height: 2rem;\n    line-height: 2rem;\n    font-size: .7rem;\n    text-align: left;\n    text-indent: 1rem;\n    background: rgba(245, 144, 168, 0.5);\n    color: #333;\n}\n.datail-top a{\n    color: #fa7ca3;\n}\n.detail-home{\n    color: #333;\n}\n.detail-home p{\n    margin-top: 1rem;\n}\n.img-list{\n    padding: 1rem 0;\n}\n.img-list li{\n    margin: 0.5rem 0;\n}\n.img-list li img{\n    display: block;\n    width: 80%;\n    margin-left: 10%;\n    height: auto;\n    box-shadow: 1px 3px 5px #ccc;\n}\n", ""]);
 
 // exports
 
 
 /***/ }),
 
-/***/ 63:
+/***/ 65:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -579,7 +597,23 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     }
   }, [_vm._v(_vm._s(_vm.data.user.nickname))])]), _vm._v(" "), _c('div', {
     staticClass: "detail-home"
-  }, [_c('p', [_vm._v(_vm._s(_vm.data.title))])])]), _vm._v(" "), _c('my-footer')], 1)
+  }, [_c('p', [_vm._v(_vm._s(_vm.data.title))]), _vm._v(" "), _c('ul', {
+    staticClass: "img-list"
+  }, _vm._l((_vm.data.images), function(item) {
+    return _c('li', {
+      key: item.$index
+    }, [_c('img', {
+      directives: [{
+        name: "lazyload",
+        rawName: "v-lazyload",
+        value: (item),
+        expression: "item"
+      }],
+      attrs: {
+        "alt": ""
+      }
+    })])
+  }))])]), _vm._v(" "), _c('my-footer')], 1)
 },staticRenderFns: []}
 module.exports.render._withStripped = true
 if (false) {
@@ -591,17 +625,17 @@ if (false) {
 
 /***/ }),
 
-/***/ 65:
+/***/ 67:
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(58);
+var content = __webpack_require__(60);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(53)("2f39b9a8", content, false);
+var update = __webpack_require__(55)("2f39b9a8", content, false);
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags

@@ -1,14 +1,14 @@
 webpackJsonp([2],{
 
-/***/ 47:
+/***/ 49:
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
-var Component = __webpack_require__(49)(
+var Component = __webpack_require__(51)(
   /* script */
-  __webpack_require__(55),
+  __webpack_require__(57),
   /* template */
-  __webpack_require__(62),
+  __webpack_require__(64),
   /* styles */
   null,
   /* scopeId */
@@ -41,7 +41,7 @@ module.exports = Component.exports
 
 /***/ }),
 
-/***/ 49:
+/***/ 51:
 /***/ (function(module, exports) {
 
 /* globals __VUE_SSR_CONTEXT__ */
@@ -139,7 +139,7 @@ module.exports = function normalizeComponent (
 
 /***/ }),
 
-/***/ 51:
+/***/ 53:
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(2)(undefined);
@@ -154,13 +154,13 @@ exports.push([module.i, ".box{padding-bottom:0; box-shadow: 1px 3px 5px #ccc;bac
 
 /***/ }),
 
-/***/ 52:
+/***/ 54:
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(51);
+var content = __webpack_require__(53);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // Prepare cssTransformation
 var transform;
@@ -186,7 +186,7 @@ if(false) {
 
 /***/ }),
 
-/***/ 55:
+/***/ 57:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -220,7 +220,7 @@ Object.defineProperty(exports, "__esModule", {
 //
 
 
-__webpack_require__(52);
+__webpack_require__(54);
 
 var homeData = {
 
@@ -253,7 +253,7 @@ exports.default = {
 
 /***/ }),
 
-/***/ 62:
+/***/ 64:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;

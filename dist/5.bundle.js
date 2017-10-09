@@ -499,6 +499,8 @@ Object.defineProperty(exports, "__esModule", {
 //
 //
 //
+//
+//
 
 
 __webpack_require__(52);
@@ -579,7 +581,21 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     }
   }, [_vm._v(_vm._s(_vm.data.user.nickname))])]), _vm._v(" "), _c('div', {
     staticClass: "detail-home"
-  }, [_c('p', [_vm._v(_vm._s(_vm.data.title))])])]), _vm._v(" "), _c('my-footer')], 1)
+  }, [_c('p', [_vm._v(_vm._s(_vm.data.title))])]), _vm._v(" "), _c('ul', _vm._l((_vm.data.images), function(item) {
+    return _c('li', {
+      key: item.$index
+    }, [_c('img', {
+      directives: [{
+        name: "LazyLoad",
+        rawName: "v-LazyLoad",
+        value: (item),
+        expression: "item"
+      }],
+      attrs: {
+        "alt": ""
+      }
+    })])
+  }))]), _vm._v(" "), _c('my-footer')], 1)
 },staticRenderFns: []}
 module.exports.render._withStripped = true
 if (false) {
