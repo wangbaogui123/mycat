@@ -495,6 +495,10 @@ Object.defineProperty(exports, "__esModule", {
 //
 //
 //
+//
+//
+//
+//
 
 
 __webpack_require__(52);
@@ -549,7 +553,7 @@ exports = module.exports = __webpack_require__(2)(undefined);
 
 
 // module
-exports.push([module.i, "\n.datail-top{\n    margin: .3rem 0;\n    box-shadow: 0px 0px 1px #ccc;\n    height: 2rem;\n    line-height: 2rem;\n    font-size: .8rem;\n    text-align: left;\n    text-indent: 1rem;\n    background: rgba(245, 144, 168, 0.5);\n}\n.detail-home{\n    padding: 1rem 0;\n    color: #333;\n}\n", ""]);
+exports.push([module.i, "\n.datail-top{\n    margin: .3rem 0;\n    box-shadow: 0px 0px 1px #ccc;\n    height: 2rem;\n    line-height: 2rem;\n    font-size: .7rem;\n    text-align: left;\n    text-indent: 1rem;\n    background: rgba(245, 144, 168, 0.5);\n    color: #333;\n}\n.datail-top a{\n    color: #fa7ca3;\n}\n.detail-home{\n    padding: 1rem 0;\n    color: #333;\n}\n", ""]);
 
 // exports
 
@@ -568,7 +572,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     staticClass: "box"
   }, [_c('div', {
     staticClass: "datail-top"
-  }, [_vm._v("来自-我的萌宠推荐 铲屎官"), _c('a', {
+  }, [_vm._v("来自-我的萌宠推荐 铲屎官:"), _c('a', {
     attrs: {
       "target": "_blank",
       "href": _vm.data.user.weiboUrl
