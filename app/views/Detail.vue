@@ -55,6 +55,7 @@
         height: auto;
         box-shadow: 1px 3px 5px #ccc;
     }
+    
 </style>
 
 <script>
@@ -65,7 +66,8 @@
     var homeData = {
             
             data:{
-                user:{}
+                user:{},
+                images:[]
             }
             
         }

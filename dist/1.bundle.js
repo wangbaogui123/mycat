@@ -517,6 +517,7 @@ Object.defineProperty(exports, "__esModule", {
 //
 //
 //
+//
 
 
 __webpack_require__(54);
@@ -524,7 +525,8 @@ __webpack_require__(54);
 var homeData = {
 
     data: {
-        user: {}
+        user: {},
+        images: []
     }
 
 };
@@ -571,7 +573,7 @@ exports = module.exports = __webpack_require__(2)(undefined);
 
 
 // module
-exports.push([module.i, "\n.datail-top{\n    margin: .3rem 0;\n    box-shadow: 0px 0px 1px #ccc;\n    height: 2rem;\n    line-height: 2rem;\n    font-size: .7rem;\n    text-align: left;\n    text-indent: 1rem;\n    background: rgba(245, 144, 168, 0.5);\n    color: #333;\n}\n.datail-top a{\n    color: #fa7ca3;\n}\n.detail-home{\n    color: #333;\n}\n.detail-home p{\n    margin-top: 1rem;\n}\n.img-list{\n    padding: 1rem 0;\n}\n.img-list li{\n    margin: 0.5rem 0;\n}\n.img-list li img{\n    display: block;\n    width: 80%;\n    margin-left: 10%;\n    height: auto;\n    box-shadow: 1px 3px 5px #ccc;\n}\n", ""]);
+exports.push([module.i, "\n.datail-top{\n    margin: .3rem 0;\n    box-shadow: 0px 0px 1px #ccc;\n    height: 2rem;\n    line-height: 2rem;\n    font-size: .7rem;\n    text-align: left;\n    text-indent: 1rem;\n    background: rgba(245, 144, 168, 0.5);\n    color: #333;\n}\n.datail-top a{\n    color: #fa7ca3;\n}\n.detail-home{\n    color: #333;\n}\n.detail-home p{\n    margin-top: 1rem;\n}\n.img-list{\n    padding: 1rem 0;\n}\n.img-list li{\n    margin: 0.5rem 0;\n}\n.img-list li img{\n    display: block;\n    width: 80%;\n    margin-left: 10%;\n    height: auto;\n    box-shadow: 1px 3px 5px #ccc;\n}\n\n", ""]);
 
 // exports
 
