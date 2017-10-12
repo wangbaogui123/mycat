@@ -13,33 +13,32 @@
 
 </template>
 <style>
-    
-
-
-    .animate-box2{
+    .animate-box2 {
         position: relative;
         width: 20rem;
-        height:10rem;
+        height: 20rem;
         margin: 0 auto;
-        margin-top: 10rem;
         transform-style: preserve-3d;
-        -webkit-transform: rotateX(-33.5deg) rotateY(45deg);
-        transform: rotateX(-33.5deg) rotateY(45deg);
+        -webkit-transform: rotateX(-20deg) rotateY(0deg);
+        transform: rotateX(-20deg) rotateY(0deg);
         -webkit-perspective-origin: 50% 50%;
         perspective-origin: 50% 50%;
         -webkit-perspective: 10rem;
-        perspective: 23rem;
-
+        perspective: 20rem;
     }
     .animate-box2 div {
         position: absolute;
         top: 0;
         left: 0;
-        width: 6rem;
-        height: 6rem;
+        width: 8rem;
+        height: 8rem;
         opacity: .9;
         background-size: 100% auto;
-        transition: all .5s ease-in-out;
+        transition: all 1s ease-in-out;
+        will-change:transform;
+        -webkit-transform-origin: 10rem 10rem 0;
+        transform-origin: 10rem 10rem 0;
+        border: 5px solid darksalmon;
     }
     
 </style>
@@ -54,7 +53,6 @@
             data:{
                 user:{},
                 images:[],
-                x:0,
                 itemArr:[]
             }
             
@@ -100,31 +98,6 @@
             })
 
            
-        },
-        mounted:function(){
-            // 滑动事件
-            // this.eleBind();
-        },
-        methods:{
-            eleBind:function(){
-
-                var _this = this;
-                var box = document.getElementById("movebox");
-
-                box.addEventListener("touchmove",move,false);
-                box.addEventListener("touchend",moveend,false);
-
-                function move (event){
-                    event.preventDefault();
-                    var x = event.touches[0].pageX;
-                         
-                }
-                function moveend (event){
-                    event.preventDefault();
-                    var endx = event.changedTouches[0].pageX;
-                    
-                }
-            }
         }
 
     }

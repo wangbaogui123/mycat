@@ -503,7 +503,6 @@ Object.defineProperty(exports, "__esModule", {
 //
 //
 //
-//
 
 
 __webpack_require__(54);
@@ -513,7 +512,6 @@ var homeData = {
     data: {
         user: {},
         images: [],
-        x: 0,
         itemArr: []
     }
 
@@ -549,29 +547,6 @@ exports.default = {
 
             console.log(data);
         });
-    },
-    mounted: function mounted() {
-        // 滑动事件
-        // this.eleBind();
-    },
-    methods: {
-        eleBind: function eleBind() {
-
-            var _this = this;
-            var box = document.getElementById("movebox");
-
-            box.addEventListener("touchmove", move, false);
-            box.addEventListener("touchend", moveend, false);
-
-            function move(event) {
-                event.preventDefault();
-                var x = event.touches[0].pageX;
-            }
-            function moveend(event) {
-                event.preventDefault();
-                var endx = event.changedTouches[0].pageX;
-            }
-        }
     }
 
 };
@@ -586,7 +561,7 @@ exports = module.exports = __webpack_require__(2)(undefined);
 
 
 // module
-exports.push([module.i, "\n.animate-box2{\n    position: relative;\n    width: 20rem;\n    height:10rem;\n    margin: 0 auto;\n    margin-top: 10rem;\n    transform-style: preserve-3d;\n    -webkit-transform: rotateX(-33.5deg) rotateY(45deg);\n    transform: rotateX(-33.5deg) rotateY(45deg);\n    -webkit-perspective-origin: 50% 50%;\n    perspective-origin: 50% 50%;\n    -webkit-perspective: 10rem;\n    perspective: 23rem;\n}\n.animate-box2 div {\n    position: absolute;\n    top: 0;\n    left: 0;\n    width: 6rem;\n    height: 6rem;\n    opacity: .9;\n    background-size: 100% auto;\n    transition: all .5s ease-in-out;\n}\n\n", ""]);
+exports.push([module.i, "\n.animate-box2 {\n    position: relative;\n    width: 20rem;\n    height: 20rem;\n    margin: 0 auto;\n    transform-style: preserve-3d;\n    -webkit-transform: rotateX(-20deg) rotateY(0deg);\n    transform: rotateX(-20deg) rotateY(0deg);\n    -webkit-perspective-origin: 50% 50%;\n    perspective-origin: 50% 50%;\n    -webkit-perspective: 10rem;\n    perspective: 20rem;\n}\n.animate-box2 div {\n    position: absolute;\n    top: 0;\n    left: 0;\n    width: 8rem;\n    height: 8rem;\n    opacity: .9;\n    background-size: 100% auto;\n    transition: all 1s ease-in-out;\n    will-change:transform;\n    -webkit-transform-origin: 10rem 10rem 0;\n    transform-origin: 10rem 10rem 0;\n    border: 5px solid darksalmon;\n}\n\n", ""]);
 
 // exports
 

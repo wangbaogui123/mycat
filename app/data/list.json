@@ -8,6 +8,38 @@
             "id":2,
             "imgUrl":"app/img/cat/2/img3.jpg"
         }
+    ],
+    "newBanner":[
+        {   
+            "id":1,
+            "pot":0,
+            "img":"app/img/cat/1/img1.jpg"
+        },
+        {   
+            "id":2,
+            "pot":60,
+            "img":"app/img/cat/1/img2.jpg"
+        },
+        {   
+            "id":3,
+            "pot":120,
+            "img":"app/img/cat/1/img3.jpg"
+        },
+        {   
+            "id":4,
+            "pot":180,
+            "img":"app/img/cat/1/img4.jpg"
+        },
+        {   
+            "id":5,
+            "pot":240,
+            "img":"app/img/cat/1/img5.jpg"
+        },
+        {   
+            "id":6,
+            "pot":300,
+            "img":"app/img/cat/1/img6.jpg"
+        }
     ]
 }
  

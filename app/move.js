@@ -5,9 +5,10 @@ export default (Vue , options = {})=>{
 
         const addListener = (ele,binding) =>{
             
-            ele.setAttribute("style","-webkit-transform: rotateY("+binding.value.pot+"deg);transform: rotateY("+binding.value.pot+"deg) translateZ(6rem);background:url("+binding.value.img+") no-repeat;background-size: 100% auto;")
+            ele.setAttribute("style","-webkit-transform: rotateY("+binding.value.pot+"deg);transform: rotateY("+binding.value.pot+"deg) translateZ(0rem);background:url("+binding.value.img+") no-repeat;background-size: 100% auto;")
             elearr.push({"ele":ele,"pot":binding.value.pot,"img":binding.value.img});
-            move();
+            
+            elearr.length == 6 ? move() : "";
     
         }
         function move(){
@@ -16,6 +17,7 @@ export default (Vue , options = {})=>{
             var startX = 0;
             var box = document.getElementById("movebox");
 
+            
             box.addEventListener("touchstart",toustart,false);
             box.addEventListener("touchmove",toumove,false);
             box.addEventListener("touchend",touend,false);
@@ -27,12 +29,12 @@ export default (Vue , options = {})=>{
             function toumove (event){
                 event.preventDefault();
                 var x = event.touches[0].pageX - startX;
-
                 if(x%10) return ;
                 for(let i = 0;i < elearr.length; i++){
-                    elearr[i].ele.setAttribute("style","-webkit-transform: rotateY("+(elearr[i].pot+x)+"deg);transform: rotateY("+(elearr[i].pot+x)+"deg) translateZ(6rem);background:url("+elearr[i].img+") no-repeat;background-size: 100% auto;");
-                    elearr[i].pot = elearr[i].pot+x;
+                    elearr[i].ele.setAttribute("style","-webkit-transform: rotateY("+(elearr[i].pot+10*(x/10))+"deg);transform: rotateY("+(elearr[i].pot+10*(x/10))+"deg) translateZ(0rem);background:url("+elearr[i].img+") no-repeat;background-size: 100% auto;");
+                    elearr[i].pot = elearr[i].pot+10*(x/10);
                 }
+                startX = event.touches[0].pageX;
                      
             }
             function touend (event){
