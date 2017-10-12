@@ -2,11 +2,11 @@
 export default (Vue , options = {})=>{
   if(!Array.prototype.remove){
     Array.prototype.remove = function(item){
-      if(!this.length) return
+      if(!this.length) return ;
       var index = this.indexOf(item);
       if( index > -1){
         this.splice(index,1);
-        return this
+        return this;
       }
     }
   }
@@ -75,7 +75,7 @@ export default (Vue , options = {})=>{
 
     //再看看是否可以显示此图片
     if(isCanShow(item)){
-      return
+      return ;
     }
     //否则将图片地址和元素均放入监听的lisenList里
     listenList.push(item);
