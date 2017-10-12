@@ -13403,6 +13403,10 @@ var _lazyLoad = __webpack_require__(11);
 
 var _lazyLoad2 = _interopRequireDefault(_lazyLoad);
 
+var _move = __webpack_require__(72);
+
+var _move2 = _interopRequireDefault(_move);
+
 function _interopRequireDefault(obj) {
 	return obj && obj.__esModule ? obj : { default: obj };
 }
@@ -13419,6 +13423,7 @@ __webpack_require__(10)(_vue2.default);
 _vue2.default.use(_vueRouter2.default);
 _vue2.default.use(_canvasone2.default);
 _vue2.default.use(_lazyLoad2.default);
+_vue2.default.use(_move2.default);
 
 var routes = (0, _router2.default)();
 
@@ -14639,7 +14644,7 @@ exports = module.exports = __webpack_require__(2)(undefined);
 
 
 // module
-exports.push([module.i, "body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,blockquote,th,td,p,header,footer,html{margin:0;padding:0;font-weight:normal;}\ninput,button,select,textarea{outline:none; vertical-align:middle;font-weight: 300;color:#333;}\ninput::-moz-focus-inner{ border: 0;padding: 0;}\nli{list-style:none;font-weight:normal;}\nem,i{font-style:normal;}\na,li,p{text-decoration: none;font-weight:300;color: #333;-webkit-tap-highlight-color:rgba(0,0,0,0);-moz-tap-highlight-color:rgba(0,0,0,0);-ms-tap-highlight-color:rgba(0,0,0,0);-o-tap-highlight-color:rgba(0,0,0,0);tap-highlight-color:rgba(0,0,0,0)}\nimg{border:none}\ntextarea{resize:none}\nheader,nav,section,article,footer,figure,figcaption{display:block;}\ninput[type=\"text\"],input[type=\"search\"],input[type=\"password\"]{ -ms-appearance: none; -o-appearance: none; -moz-appearance: none; -webkit-appearance: none; appearance: none; list-style: none;border: none;}\nbody{background: #e6e6e6;color:#404040;text-align:center;min-width:320px;width: 100%; min-height: 100%;font-family: \"Source Sans Pro\", \"Helvetica Neue\", Helvetica, Arial, sans-serif;}\nhtml {background: #e6e6e6;max-width: 768px; min-width: 320px; width: 100%; min-height: 100%; margin: 0 auto;}\ninput[type=\"button\"], input[type=\"submit\"], input[type=\"reset\"] {-webkit-appearance: none;}\n.clearfix:after{ visibility:hidden; display:block; font-size:0; content:\" \"; clear:both; height:0;}\n.clearfix{ zoom:1;}\n\nbody,html{\n\tbackground:rgba(255, 243, 246, 0.5);\n}\n/*device-width*/\n@media only screen and (max-width: 359px) { html { font-size:85%; } }\n@media only screen and (min-width: 360px) and (max-width: 399px) { html { font-size: 100%; } }\n@media only screen and (min-width: 400px) and (max-width: 479px) { html { font-size: 112.5%; } }\n@media only screen and (min-width: 480px) and (max-width: 539px) { html { font-size: 125%; } }\n@media only screen and (min-width: 540px) and (max-width: 599px) { html { font-size: 150%; } }\n@media only screen and (min-width: 600px) and (max-width: 639px) { html { font-size: 165%; } }\n@media only screen and (min-width: 640px) and (max-width: 719px) { html { font-size: 177.5%; } }\n@media only screen and (min-width: 720px) and (max-width: 767px) { html { font-size: 200%; } }\n@media only screen and (min-width: 768px) { html { font-size: 200%; } }\n\n.app{\n\twidth: 100%;\n\theight: auto;\n\tposition: relative;\n}\n.box{\n\twidth: 98%;\n\tmargin: .3rem auto;\n\tmin-height:20rem;\n\theight: auto;\n\tmargin-top:3.3rem;\n\tpadding-bottom: 1rem; \n}\n.bg-box{\n\twidth: 100%;\n\theight: auto;\n\tbackground: -webkit-linear-gradient(left top, #edf6f8 , #88c5d6); /* Safari 5.1 - 6.0 */\n  \tbackground: -o-linear-gradient(bottom right, #edf6f8, #88c5d6); /* Opera 11.1 - 12.0 */\n    background: -moz-linear-gradient(bottom right, #edf6f8, #88c5d6); /* Firefox 3.6 - 15 */\n    background: linear-gradient(to bottom right, #edf6f8 , #88c5d6); /* 标准的语法 */\n}\n.footer{\n\twidth:98%;\n\tmargin: 0 auto;\n\tbackground: #fff;\n\tpadding: 1rem 0;\n\tfont-size: .9rem;\n\tbox-shadow: 1px 3px 5px #ccc;\n}\n.footer p{\n\tcolor: #a6b1b0;\n\tfont-weight: 300;\n\tline-height: 1.5rem;\n\theight: 1.5rem;\n\ttext-shadow: 2px 2px 2px #ccc;\n}\n\n\n.colorMove{\n\tanimation:colormove 20s linear infinite;\n\t-webkit-animation:colormove 20s linear infinite;\n\tfont-weight: normal;\n}\n\n@keyframes colormove {\n    0%{\n\t\tcolor: rgba(255, 93, 61, 0.69);\n    }\n    10%{\n\t\tcolor: #ec5399;\n    }\n    20%{\n\t\tcolor: #57b846;\n    }\n    30%{\n\t\tcolor: #ff4b5a;\n    }\n    40%{\n\t\tcolor: #57b846;\n    }\n    50%{\n\t\tcolor: #f74877;\n    }\n    60%{\n\t\tcolor: #62d8b6;\n    }\n    70%{\n\t\tcolor: #ff5f3d;\n    }\n    80%{\n\t\tcolor: #ff8e50;\n    }\n    90%{\n\t\tcolor: #62d8b6;\n    }\n    100%{\n\t   color: #fa4251;\n    }\n}\n@-webkit-keyframes colormove {\n    0%{\n\t\tcolor: rgba(255, 93, 61, 0.77);\n    }\n    10%{\n\t\tcolor: #ec5399;\n    }\n    20%{\n\t\tcolor: #57b846;\n    }\n    30%{\n\t\tcolor: #ff4b5a;\n    }\n    40%{\n\t\tcolor: #57b846;\n    }\n    50%{\n\t\tcolor: #f74877;\n    }\n    60%{\n\t\tcolor: #62d8b6;\n    }\n    70%{\n\t\tcolor: #ff5f3d;\n    }\n    80%{\n\t\tcolor: #ff8e50;\n    }\n    90%{\n\t\tcolor: #62d8b6;\n    }\n    100%{\n\t   color: #17c6ee;\n    }\n}", ""]);
+exports.push([module.i, "body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,blockquote,th,td,p,header,footer,html{margin:0;padding:0;font-weight:normal;}\ninput,button,select,textarea{outline:none; vertical-align:middle;font-weight: 300;color:#333;}\ninput::-moz-focus-inner{ border: 0;padding: 0;}\nli{list-style:none;font-weight:normal;}\nem,i{font-style:normal;}\na,li,p{text-decoration: none;font-weight:300;color: #333;-webkit-tap-highlight-color:rgba(0,0,0,0);-moz-tap-highlight-color:rgba(0,0,0,0);-ms-tap-highlight-color:rgba(0,0,0,0);-o-tap-highlight-color:rgba(0,0,0,0);tap-highlight-color:rgba(0,0,0,0)}\nimg{border:none}\ntextarea{resize:none}\nheader,nav,section,article,footer,figure,figcaption{display:block;}\ninput[type=\"text\"],input[type=\"search\"],input[type=\"password\"]{ -ms-appearance: none; -o-appearance: none; -moz-appearance: none; -webkit-appearance: none; appearance: none; list-style: none;border: none;}\nbody{background: #e6e6e6;color:#404040;text-align:center;min-width:320px;width: 100%; min-height: 100%;font-family: \"Source Sans Pro\", \"Helvetica Neue\", Helvetica, Arial, sans-serif;}\nhtml {background: #e6e6e6;max-width: 768px; min-width: 320px; width: 100%; min-height: 100%; margin: 0 auto;}\ninput[type=\"button\"], input[type=\"submit\"], input[type=\"reset\"] {-webkit-appearance: none;}\n.clearfix:after{ visibility:hidden; display:block; font-size:0; content:\" \"; clear:both; height:0;}\n.clearfix{ zoom:1;}\n\nbody,html{\n\tbackground:rgba(255, 243, 246, 0.5);\n}\n/*device-width*/\n@media only screen and (max-width: 359px) { html { font-size:85%; } }\n@media only screen and (min-width: 360px) and (max-width: 399px) { html { font-size: 100%; } }\n@media only screen and (min-width: 400px) and (max-width: 479px) { html { font-size: 112.5%; } }\n@media only screen and (min-width: 480px) and (max-width: 539px) { html { font-size: 125%; } }\n@media only screen and (min-width: 540px) and (max-width: 599px) { html { font-size: 150%; } }\n@media only screen and (min-width: 600px) and (max-width: 639px) { html { font-size: 165%; } }\n@media only screen and (min-width: 640px) and (max-width: 719px) { html { font-size: 177.5%; } }\n@media only screen and (min-width: 720px) and (max-width: 767px) { html { font-size: 200%; } }\n@media only screen and (min-width: 768px) { html { font-size: 200%; } }\n\n.app{\n\twidth: 100%;\n\theight: auto;\n\tposition: relative;\n}\n.box{\n\twidth: 98%;\n\tmargin: .3rem auto;\n\tmin-height:30rem;\n\theight: auto;\n\tmargin-top:3.3rem;\n\tpadding-bottom: 1rem; \n}\n.bg-box{\n\twidth: 100%;\n\theight: auto;\n\tbackground: -webkit-linear-gradient(left top, #edf6f8 , #88c5d6); /* Safari 5.1 - 6.0 */\n  \tbackground: -o-linear-gradient(bottom right, #edf6f8, #88c5d6); /* Opera 11.1 - 12.0 */\n    background: -moz-linear-gradient(bottom right, #edf6f8, #88c5d6); /* Firefox 3.6 - 15 */\n    background: linear-gradient(to bottom right, #edf6f8 , #88c5d6); /* 标准的语法 */\n}\n.footer{\n\twidth:98%;\n\tmargin: 0 auto;\n\tbackground: #fff;\n\tpadding: 1rem 0;\n\tfont-size: .9rem;\n\tbox-shadow: 1px 3px 5px #ccc;\n}\n.footer p{\n\tcolor: #a6b1b0;\n\tfont-weight: 300;\n\tline-height: 1.5rem;\n\theight: 1.5rem;\n\ttext-shadow: 2px 2px 2px #ccc;\n}\n\n\n.colorMove{\n\tanimation:colormove 20s linear infinite;\n\t-webkit-animation:colormove 20s linear infinite;\n\tfont-weight: normal;\n}\n\n@keyframes colormove {\n    0%{\n\t\tcolor: rgba(255, 93, 61, 0.69);\n    }\n    10%{\n\t\tcolor: #ec5399;\n    }\n    20%{\n\t\tcolor: #57b846;\n    }\n    30%{\n\t\tcolor: #ff4b5a;\n    }\n    40%{\n\t\tcolor: #57b846;\n    }\n    50%{\n\t\tcolor: #f74877;\n    }\n    60%{\n\t\tcolor: #62d8b6;\n    }\n    70%{\n\t\tcolor: #ff5f3d;\n    }\n    80%{\n\t\tcolor: #ff8e50;\n    }\n    90%{\n\t\tcolor: #62d8b6;\n    }\n    100%{\n\t   color: #fa4251;\n    }\n}\n@-webkit-keyframes colormove {\n    0%{\n\t\tcolor: rgba(255, 93, 61, 0.77);\n    }\n    10%{\n\t\tcolor: #ec5399;\n    }\n    20%{\n\t\tcolor: #57b846;\n    }\n    30%{\n\t\tcolor: #ff4b5a;\n    }\n    40%{\n\t\tcolor: #57b846;\n    }\n    50%{\n\t\tcolor: #f74877;\n    }\n    60%{\n\t\tcolor: #62d8b6;\n    }\n    70%{\n\t\tcolor: #ff5f3d;\n    }\n    80%{\n\t\tcolor: #ff8e50;\n    }\n    90%{\n\t\tcolor: #62d8b6;\n    }\n    100%{\n\t   color: #17c6ee;\n    }\n}", ""]);
 
 // exports
 
@@ -14675,6 +14680,91 @@ module.exports = __webpack_require__.p + "cat.png";
 /***/ (function(module, exports) {
 
 module.exports = "data:image/png;base64,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"
+
+/***/ }),
+/* 47 */,
+/* 48 */,
+/* 49 */,
+/* 50 */,
+/* 51 */,
+/* 52 */,
+/* 53 */,
+/* 54 */,
+/* 55 */,
+/* 56 */,
+/* 57 */,
+/* 58 */,
+/* 59 */,
+/* 60 */,
+/* 61 */,
+/* 62 */,
+/* 63 */,
+/* 64 */,
+/* 65 */,
+/* 66 */,
+/* 67 */,
+/* 68 */,
+/* 69 */,
+/* 70 */,
+/* 71 */,
+/* 72 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+//Vue 图片懒加载
+exports.default = function (Vue) {
+    var options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+
+    var elearr = [];
+
+    var addListener = function addListener(ele, binding) {
+
+        ele.setAttribute("style", "-webkit-transform: rotateY(" + binding.value.pot + "deg);transform: rotateY(" + binding.value.pot + "deg) translateZ(6rem);background:url(" + binding.value.img + ") no-repeat;background-size: 100% auto;");
+        elearr.push({ "ele": ele, "pot": binding.value.pot, "img": binding.value.img });
+        move();
+    };
+    function move() {
+
+        var _this = this;
+        var startX = 0;
+        var box = document.getElementById("movebox");
+
+        box.addEventListener("touchstart", toustart, false);
+        box.addEventListener("touchmove", toumove, false);
+        box.addEventListener("touchend", touend, false);
+
+        function toustart(event) {
+            event.preventDefault();
+            startX = event.touches[0].pageX;
+        }
+        function toumove(event) {
+            event.preventDefault();
+            var x = event.touches[0].pageX - startX;
+
+            if (x % 10) return;
+            for (var i = 0; i < elearr.length; i++) {
+                elearr[i].ele.setAttribute("style", "-webkit-transform: rotateY(" + (elearr[i].pot + x) + "deg);transform: rotateY(" + (elearr[i].pot + x) + "deg) translateZ(6rem);background:url(" + elearr[i].img + ") no-repeat;background-size: 100% auto;");
+                elearr[i].pot = elearr[i].pot + x;
+            }
+        }
+        function touend(event) {
+            event.preventDefault();
+            var endx = event.changedTouches[0].pageX;
+            startX = endx;
+        }
+    }
+
+    Vue.directive('move', {
+        inserted: addListener,
+        updated: addListener
+    });
+};
 
 /***/ })
 /******/ ]);

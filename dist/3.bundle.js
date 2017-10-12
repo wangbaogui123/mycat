@@ -504,94 +504,6 @@ Object.defineProperty(exports, "__esModule", {
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 
 __webpack_require__(54);
@@ -600,7 +512,9 @@ var homeData = {
 
     data: {
         user: {},
-        images: []
+        images: [],
+        x: 0,
+        itemArr: []
     }
 
 };
@@ -614,6 +528,8 @@ exports.default = {
         var _this = this;
         var $this = this.$parent;
         var id = _this.$route.params.id;
+
+        _this.itemArr = [{ "pot": 0, "img": "app/img/cat/1/img1.jpg" }, { "pot": 60, "img": "app/img/cat/1/img2.jpg" }, { "pot": 120, "img": "app/img/cat/1/img3.jpg" }, { "pot": 180, "img": "app/img/cat/1/img4.jpg" }, { "pot": 240, "img": "app/img/cat/1/img5.jpg" }, { "pot": 300, "img": "app/img/cat/1/img6.jpg" }];
         $this.com_Ajax({
 
             method: 'get',
@@ -633,6 +549,29 @@ exports.default = {
 
             console.log(data);
         });
+    },
+    mounted: function mounted() {
+        // 滑动事件
+        // this.eleBind();
+    },
+    methods: {
+        eleBind: function eleBind() {
+
+            var _this = this;
+            var box = document.getElementById("movebox");
+
+            box.addEventListener("touchmove", move, false);
+            box.addEventListener("touchend", moveend, false);
+
+            function move(event) {
+                event.preventDefault();
+                var x = event.touches[0].pageX;
+            }
+            function moveend(event) {
+                event.preventDefault();
+                var endx = event.changedTouches[0].pageX;
+            }
+        }
     }
 
 };
@@ -647,7 +586,7 @@ exports = module.exports = __webpack_require__(2)(undefined);
 
 
 // module
-exports.push([module.i, "\n.animate-box {\n    position: relative;\n    width: 100%;\n    height:100%;\n    margin-top: 10rem;\n    transform-style: preserve-3d;\n    -webkit-transform: rotateX(-33.5deg) rotateY(45deg);\n    transform: rotateX(-33.5deg) rotateY(45deg);\n}\n.animate-box div {\n    position: absolute;\n    top: 0;\n    left: 0;\n    width: 5rem;\n    height: 5rem;\n    opacity: .5;\n}\n.animate-box .one {\n    background: blue;\n    -webkit-transform: rotateX(0deg) rotateY(-30deg) translate3d(-2.6rem,-13.3rem,18.4rem);\n    transform: rotateX(0deg) rotateY(-30deg) translate3d(-2.6rem,-13.3rem,18.4rem);\n}\n.animate-box .two {\n    background: red;\n    -webkit-transform: rotateX(0deg) rotateY(-30deg) translate3d(2.4rem,-0.4rem,5rem);\n    transform: rotateX(0deg) rotateY(-30deg) translate3d(2.4rem,-0.4rem,5rem);\n}\n.animate-box .three {\n    background: orange;\n    -webkit-transform: rotateX(0deg) rotateY(60deg) translate3d(-2rem,-0.2rem,5rem);\n    transform: rotateX(0deg) rotateY(60deg) translate3d(-2rem,-0.2rem,5rem);\n}\n.animate-box .four {\n    background: greenyellow;\n    -webkit-transform: rotateX(90deg) rotateY(60deg) translate3d(-2rem,0,0);\n    transform: rotateX(0deg) rotateY(60deg) translate3d(-2rem,0,0);\n}\n.animate-box .five {\n    background: yellow;\n    -webkit-transform: rotateX(90deg) rotateY(60deg) translate3d(-2rem,0,0);\n    transform: rotateX(0deg) rotateY(60deg) translate3d(-2rem,0,0);\n}\n.animate-box .six {\n    background: darkmagenta;\n    -webkit-transform: rotateX(90deg) rotateY(60deg) translate3d(-2rem,0,0);\n    transform: rotateX(0deg) rotateY(60deg) translate3d(-2rem,0,0);\n}\n.animate-box2{\n    position: relative;\n    width: 10rem;\n    height:10rem;\n    margin: 0 auto;\n    margin-top: 10rem;\n    transform-style: preserve-3d;\n    -webkit-transform: rotateX(-33.5deg) rotateY(45deg);\n    transform: rotateX(-33.5deg) rotateY(45deg);\n    -webkit-perspective-origin: 50% 50%;\n    perspective-origin: 50% 50%;\n    -webkit-perspective: 10rem;\n    perspective: 10rem;\n}\n.animate-box2 div {\n    position: absolute;\n    top: 0;\n    left: 0;\n    width: 5rem;\n    height: 5rem;\n    opacity: .5;\n}\n.animate-box2 .one {\n    background: blue;\n    -webkit-transform: rotateY(0deg);\n    transform: rotateY(0deg) translateZ(5rem);\n}\n.animate-box2 .two {\n    background: red;\n    -webkit-transform: rotateY(60deg);\n    transform: rotateY(60deg) translateZ(5rem);\n}\n.animate-box2 .three {\n    background: orange;\n    -webkit-transform: rotateY(120deg);\n    transform: rotateY(120deg) translateZ(5rem);\n}\n.animate-box2 .four {\n    background: greenyellow;\n    -webkit-transform: rotateY(180deg);\n    transform: rotateY(180deg) translateZ(5rem);\n}\n.animate-box2 .five {\n    background: yellow;\n    -webkit-transform: rotateY(240deg);\n    transform: rotateY(240deg) translateZ(5rem);\n}\n.animate-box2 .six {\n    background: darkmagenta;\n    -webkit-transform: rotateY(300deg);\n    transform: rotateY(300deg) translateZ(5rem);\n}\n\n", ""]);
+exports.push([module.i, "\n.animate-box2{\n    position: relative;\n    width: 20rem;\n    height:10rem;\n    margin: 0 auto;\n    margin-top: 10rem;\n    transform-style: preserve-3d;\n    -webkit-transform: rotateX(-33.5deg) rotateY(45deg);\n    transform: rotateX(-33.5deg) rotateY(45deg);\n    -webkit-perspective-origin: 50% 50%;\n    perspective-origin: 50% 50%;\n    -webkit-perspective: 10rem;\n    perspective: 23rem;\n}\n.animate-box2 div {\n    position: absolute;\n    top: 0;\n    left: 0;\n    width: 6rem;\n    height: 6rem;\n    opacity: .9;\n    background-size: 100% auto;\n    transition: all .5s ease-in-out;\n}\n\n", ""]);
 
 // exports
 
@@ -658,26 +597,25 @@ exports.push([module.i, "\n.animate-box {\n    position: relative;\n    width: 1
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _vm._m(0)
-},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
     staticClass: "box"
   }, [_c('div', {
-    staticClass: "animate-box2"
-  }, [_c('div', {
-    staticClass: "one"
-  }), _vm._v(" "), _c('div', {
-    staticClass: "two"
-  }), _vm._v(" "), _c('div', {
-    staticClass: "three"
-  }), _vm._v(" "), _c('div', {
-    staticClass: "four"
-  }), _vm._v(" "), _c('div', {
-    staticClass: "five"
-  }), _vm._v(" "), _c('div', {
-    staticClass: "six"
-  })])])
-}]}
+    staticClass: "animate-box2",
+    attrs: {
+      "id": "movebox"
+    }
+  }, _vm._l((_vm.itemArr), function(item) {
+    return _c('div', {
+      directives: [{
+        name: "move",
+        rawName: "v-move",
+        value: (item),
+        expression: "item"
+      }],
+      key: item.$inex
+    })
+  }))])
+},staticRenderFns: []}
 module.exports.render._withStripped = true
 if (false) {
   module.hot.accept()
