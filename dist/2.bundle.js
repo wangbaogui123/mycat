@@ -6,13 +6,13 @@ webpackJsonp([2],{
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(74)
+  __webpack_require__(73)
 }
-var Component = __webpack_require__(51)(
+var Component = __webpack_require__(53)(
   /* script */
-  __webpack_require__(57),
+  __webpack_require__(58),
   /* template */
-  __webpack_require__(64),
+  __webpack_require__(69),
   /* styles */
   injectStyle,
   /* scopeId */
@@ -20,9 +20,9 @@ var Component = __webpack_require__(51)(
   /* moduleIdentifier (server only) */
   null
 )
-Component.options.__file = "/Users/wangbaogui/wbg/mycat/app/views/Home.vue"
+Component.options.__file = "/Users/wangbaogui/wbg/mycat/app/views/Detail.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key.substr(0, 2) !== "__"})) {console.error("named exports are not supported in *.vue files.")}
-if (Component.options.functional) {console.error("[vue-loader] Home.vue: functional components are not supported with templates, they should use render functions.")}
+if (Component.options.functional) {console.error("[vue-loader] Detail.vue: functional components are not supported with templates, they should use render functions.")}
 
 /* hot reload */
 if (false) {(function () {
@@ -31,9 +31,9 @@ if (false) {(function () {
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-689fc47e", Component.options)
+    hotAPI.createRecord("data-v-6bddedb3", Component.options)
   } else {
-    hotAPI.reload("data-v-689fc47e", Component.options)
+    hotAPI.reload("data-v-6bddedb3", Component.options)
   }
   module.hot.dispose(function (data) {
     disposed = true
@@ -45,7 +45,44 @@ module.exports = Component.exports
 
 /***/ }),
 
-/***/ 51:
+/***/ 52:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+/**
+ * Translates the list format produced by css-loader into something
+ * easier to manipulate.
+ */
+
+module.exports = function listToStyles(parentId, list) {
+  var styles = [];
+  var newStyles = {};
+  for (var i = 0; i < list.length; i++) {
+    var item = list[i];
+    var id = item[0];
+    var css = item[1];
+    var media = item[2];
+    var sourceMap = item[3];
+    var part = {
+      id: parentId + ':' + i,
+      css: css,
+      media: media,
+      sourceMap: sourceMap
+    };
+    if (!newStyles[id]) {
+      styles.push(newStyles[id] = { id: id, parts: [part] });
+    } else {
+      newStyles[id].parts.push(part);
+    }
+  }
+  return styles;
+};
+
+/***/ }),
+
+/***/ 53:
 /***/ (function(module, exports) {
 
 /* globals __VUE_SSR_CONTEXT__ */
@@ -143,91 +180,7 @@ module.exports = function normalizeComponent (
 
 /***/ }),
 
-/***/ 52:
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-/**
- * Translates the list format produced by css-loader into something
- * easier to manipulate.
- */
-
-module.exports = function listToStyles(parentId, list) {
-  var styles = [];
-  var newStyles = {};
-  for (var i = 0; i < list.length; i++) {
-    var item = list[i];
-    var id = item[0];
-    var css = item[1];
-    var media = item[2];
-    var sourceMap = item[3];
-    var part = {
-      id: parentId + ':' + i,
-      css: css,
-      media: media,
-      sourceMap: sourceMap
-    };
-    if (!newStyles[id]) {
-      styles.push(newStyles[id] = { id: id, parts: [part] });
-    } else {
-      newStyles[id].parts.push(part);
-    }
-  }
-  return styles;
-};
-
-/***/ }),
-
-/***/ 53:
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(2)(undefined);
-// imports
-
-
-// module
-exports.push([module.i, ".box{padding-bottom:0; box-shadow: 1px 3px 5px #ccc;background: #fff;}\n.mint-swipe,.mint-swipe-items-wrap{overflow:hidden;position:relative;height:100%}\n.mint-swipe-items-wrap>div{position:absolute;-webkit-transform:translateX(-100%);\ntransform:translateX(-100%);width:100%;height:auto;display:none}\n.mint-swipe-items-wrap>div.is-active{display:block;-webkit-transform:none;transform:none}\n.mint-swipe-indicators{position:absolute;bottom:10px;left:50%;-webkit-transform:translateX(-50%);transform:translateX(-50%)}\n.mint-swipe-indicator{width:8px;height:8px;display:inline-block;border-radius:100%;background:#000;opacity:.2;margin:0 3px}\n.mint-swipe-indicator.is-active{background:#fff}\n.my-swipe {\n    height: 20rem;\n    color: #fff;\n    font-size: 30px;\n    text-align: center;\n    background: #fff;\n}\n.my-swipe a{\n    display: block;\n    width:100%;\n    height: auto\n}\n.my-swipe a img{\n    display: block;\n    width: 100%;\n    /* height: 15rem; */\n    margin: 0 auto;\n}\n\n.home-list{\n    width: 100%;\n    background: #fff;\n    height: 1rem;\n    padding: .5rem 0;\n    margin: .3rem 0;\n    color: #a6b1b0;\n    text-shadow: 2px 2px 2px #ccc;\n    overflow: hidden;\n    box-shadow:0 0 2px 2px #ccc;\n}\n.home-list ul{\n    width: 100%;\n    height: auto;\n}\n.home-list ul.list-ul{\n    animation:mymove 20s linear infinite;\n    -webkit-animation:mymove 20s linear infinite;\n}\n.home-ul{\n    width: 100%;\n    min-height: 18rem;\n    background: #fff;\n}\n\n@keyframes mymove {\n    0%{\n        transform: translateY(0%)\n    }\n\n    100%{\n       transform: translateY(-95%) \n    }\n}\n@-webkit-keyframes mymove {\n    0%{\n        transform: translateY(0%)\n    }\n\n    100%{\n       transform: translateY(-95%) \n    }\n}\n.home-list ul li{\n    height: 2rem;\n    line-height: 2rem;\n    text-overflow:ellipsis;\n    white-space:nowrap;\n    overflow:hidden;\n    text-indent: 1rem;\n    color: #a6b1b0;\n}", ""]);
-
-// exports
-
-
-/***/ }),
-
 /***/ 54:
-/***/ (function(module, exports, __webpack_require__) {
-
-// style-loader: Adds some css to the DOM by adding a <style> tag
-
-// load the styles
-var content = __webpack_require__(53);
-if(typeof content === 'string') content = [[module.i, content, '']];
-// Prepare cssTransformation
-var transform;
-
-var options = {}
-options.transform = transform
-// add the styles to the DOM
-var update = __webpack_require__(3)(content, options);
-if(content.locals) module.exports = content.locals;
-// Hot Module Replacement
-if(false) {
-	// When the styles change, update the <style> tags
-	if(!content.locals) {
-		module.hot.accept("!!../../node_modules/css-loader/index.js!./home.css", function() {
-			var newContent = require("!!../../node_modules/css-loader/index.js!./home.css");
-			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-			update(newContent);
-		});
-	}
-	// When the module is disposed, remove the <style> tags
-	module.hot.dispose(function() { update(); });
-}
-
-/***/ }),
-
-/***/ 55:
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -449,7 +402,54 @@ function applyToTag (styleElement, obj) {
 
 /***/ }),
 
-/***/ 57:
+/***/ 55:
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(2)(undefined);
+// imports
+
+
+// module
+exports.push([module.i, ".box{padding-bottom:0; box-shadow: 1px 3px 5px #ccc;background: #fff;}\n.mint-swipe,.mint-swipe-items-wrap{overflow:hidden;position:relative;height:100%}\n.mint-swipe-items-wrap>div{position:absolute;-webkit-transform:translateX(-100%);\ntransform:translateX(-100%);width:100%;height:auto;display:none}\n.mint-swipe-items-wrap>div.is-active{display:block;-webkit-transform:none;transform:none}\n.mint-swipe-indicators{position:absolute;bottom:10px;left:50%;-webkit-transform:translateX(-50%);transform:translateX(-50%)}\n.mint-swipe-indicator{width:8px;height:8px;display:inline-block;border-radius:100%;background:#000;opacity:.2;margin:0 3px}\n.mint-swipe-indicator.is-active{background:#fff}\n.my-swipe {\n    height: 20rem;\n    color: #fff;\n    font-size: 30px;\n    text-align: center;\n    background: #fff;\n}\n.my-swipe a{\n    display: block;\n    width:100%;\n    height: auto\n}\n.my-swipe a img{\n    display: block;\n    width: 100%;\n    /* height: 15rem; */\n    margin: 0 auto;\n}\n\n.home-list{\n    width: 100%;\n    background: #fff;\n    height: 1rem;\n    padding: .5rem 0;\n    margin: .3rem 0;\n    color: #a6b1b0;\n    text-shadow: 2px 2px 2px #ccc;\n    overflow: hidden;\n    box-shadow:0 0 2px 2px #ccc;\n}\n.home-list ul{\n    width: 100%;\n    height: auto;\n}\n.home-list ul.list-ul{\n    animation:mymove 20s linear infinite;\n    -webkit-animation:mymove 20s linear infinite;\n}\n.home-ul{\n    width: 100%;\n    min-height: 18rem;\n    background: #fff;\n}\n\n@keyframes mymove {\n    0%{\n        transform: translateY(0%)\n    }\n\n    100%{\n       transform: translateY(-95%) \n    }\n}\n@-webkit-keyframes mymove {\n    0%{\n        transform: translateY(0%)\n    }\n\n    100%{\n       transform: translateY(-95%) \n    }\n}\n.home-list ul li{\n    height: 2rem;\n    line-height: 2rem;\n    text-overflow:ellipsis;\n    white-space:nowrap;\n    overflow:hidden;\n    text-indent: 1rem;\n    color: #a6b1b0;\n}", ""]);
+
+// exports
+
+
+/***/ }),
+
+/***/ 56:
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(55);
+if(typeof content === 'string') content = [[module.i, content, '']];
+// Prepare cssTransformation
+var transform;
+
+var options = {}
+options.transform = transform
+// add the styles to the DOM
+var update = __webpack_require__(3)(content, options);
+if(content.locals) module.exports = content.locals;
+// Hot Module Replacement
+if(false) {
+	// When the styles change, update the <style> tags
+	if(!content.locals) {
+		module.hot.accept("!!../../node_modules/css-loader/index.js!./home.css", function() {
+			var newContent = require("!!../../node_modules/css-loader/index.js!./home.css");
+			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+			update(newContent);
+		});
+	}
+	// When the module is disposed, remove the <style> tags
+	module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+
+/***/ 58:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -516,13 +516,18 @@ Object.defineProperty(exports, "__esModule", {
 //
 //
 //
+//
+//
 
 
-__webpack_require__(54);
+__webpack_require__(56);
 
 var homeData = {
 
-    itemArr: []
+    data: {
+        user: {},
+        images: []
+    }
 
 };
 
@@ -534,13 +539,22 @@ exports.default = {
     created: function created() {
         var _this = this;
         var $this = this.$parent;
-
+        var id = _this.$route.params.id;
         $this.com_Ajax({
+
             method: 'get',
-            url: './app/data/list.json'
+            url: './app/data/hotList.json'
+
         }, function (data) {
 
-            _this.itemArr = data.data.newBanner;
+            var data = data.data;
+            for (var i = 0; i < data.length; i++) {
+
+                if (data[i].id == id) {
+                    _this.data = data[i];
+                    return;
+                }
+            }
         }, function (data) {
 
             console.log(data);
@@ -551,7 +565,22 @@ exports.default = {
 
 /***/ }),
 
-/***/ 64:
+/***/ 63:
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(2)(undefined);
+// imports
+
+
+// module
+exports.push([module.i, "\n.datail-top{\n    margin: .3rem 0;\n    box-shadow: 0px 0px 1px #ccc;\n    height: 2rem;\n    line-height: 2rem;\n    font-size: .7rem;\n    text-align: left;\n    text-indent: 1rem;\n    background: rgba(245, 144, 168, 0.5);\n    color: #333;\n}\n.datail-top a{\n    color: #fa7ca3;\n}\n.detail-home{\n    color: #333;\n}\n.detail-home p{\n    margin-top: 1rem;\n}\n.img-list{\n    padding: 1rem 0;\n}\n.img-list li{\n    margin: 0.5rem 0;\n}\n.img-list li img{\n    display: block;\n    width: 80%;\n    margin-left: 10%;\n    height: auto;\n    box-shadow: 1px 3px 5px #ccc;\n}\n\n", ""]);
+
+// exports
+
+
+/***/ }),
+
+/***/ 69:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -562,29 +591,37 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
   }), _vm._v(" "), _c('div', {
     staticClass: "box"
   }, [_c('div', {
-    staticClass: "home"
-  }, [_c('div', {
-    staticClass: "animate-box2",
+    staticClass: "datail-top"
+  }, [_vm._v("来自-我的萌宠推荐 铲屎官:"), _c('a', {
     attrs: {
-      "id": "movebox"
+      "target": "_blank",
+      "href": _vm.data.user.weiboUrl
     }
-  }, _vm._l((_vm.itemArr), function(item) {
-    return _c('div', {
+  }, [_vm._v(_vm._s(_vm.data.user.nickname))])]), _vm._v(" "), _c('div', {
+    staticClass: "detail-home"
+  }, [_c('p', [_vm._v(_vm._s(_vm.data.title))]), _vm._v(" "), _c('ul', {
+    staticClass: "img-list"
+  }, _vm._l((_vm.data.images), function(item) {
+    return _c('li', {
+      key: item.$index
+    }, [_c('img', {
       directives: [{
-        name: "move",
-        rawName: "v-move",
+        name: "lazyload",
+        rawName: "v-lazyload",
         value: (item),
         expression: "item"
       }],
-      key: item.$inex
-    })
+      attrs: {
+        "alt": ""
+      }
+    })])
   }))])]), _vm._v(" "), _c('my-footer')], 1)
 },staticRenderFns: []}
 module.exports.render._withStripped = true
 if (false) {
   module.hot.accept()
   if (module.hot.data) {
-     require("vue-hot-reload-api").rerender("data-v-689fc47e", module.exports)
+     require("vue-hot-reload-api").rerender("data-v-6bddedb3", module.exports)
   }
 }
 
@@ -593,35 +630,20 @@ if (false) {
 /***/ 73:
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(2)(undefined);
-// imports
-
-
-// module
-exports.push([module.i, "\n.home{\n    padding-top: 3rem;\n}\n.animate-box2 {\n    position: relative;\n    width: 20rem;\n    height: 20rem;\n    margin: 0 auto;\n    transform-style: preserve-3d;\n    -webkit-transform: rotateX(-20deg) rotateY(0deg);\n    transform: rotateX(-20deg) rotateY(0deg);\n    -webkit-perspective-origin: 50% 50%;\n    perspective-origin: 50% 50%;\n    -webkit-perspective: 10rem;\n    perspective: 20rem;\n}\n.animate-box2 div {\n    position: absolute;\n    top: 0;\n    left: 0;\n    width: 8rem;\n    height: 8rem;\n    opacity: .9;\n    background-size: 100% auto;\n    transition: all 1s ease-in-out;\n    will-change:transform;\n    -webkit-transform-origin: 10rem 10rem 0;\n    transform-origin: 10rem 10rem 0;\n    border: 5px solid darksalmon;\n}\n", ""]);
-
-// exports
-
-
-/***/ }),
-
-/***/ 74:
-/***/ (function(module, exports, __webpack_require__) {
-
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(73);
+var content = __webpack_require__(63);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(55)("135de84c", content, false);
+var update = __webpack_require__(54)("2f39b9a8", content, false);
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
  if(!content.locals) {
-   module.hot.accept("!!../../node_modules/css-loader/index.js!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-689fc47e\",\"scoped\":false,\"hasInlineConfig\":false}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Home.vue", function() {
-     var newContent = require("!!../../node_modules/css-loader/index.js!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-689fc47e\",\"scoped\":false,\"hasInlineConfig\":false}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Home.vue");
+   module.hot.accept("!!../../node_modules/css-loader/index.js!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-6bddedb3\",\"scoped\":false,\"hasInlineConfig\":false}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Detail.vue", function() {
+     var newContent = require("!!../../node_modules/css-loader/index.js!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-6bddedb3\",\"scoped\":false,\"hasInlineConfig\":false}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Detail.vue");
      if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
      update(newContent);
    });

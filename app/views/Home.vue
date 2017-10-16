@@ -14,6 +14,13 @@
                 <div class="animate-box2" id="movebox">
                     <div v-for="item in itemArr" :key="item.$inex" v-move="item"></div>
                 </div>
+                <div class="list-box">
+                    <ul>
+                        <li>
+
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
 
@@ -30,7 +37,7 @@
     .animate-box2 {
         position: relative;
         width: 20rem;
-        height: 20rem;
+        height: 15rem;
         margin: 0 auto;
         transform-style: preserve-3d;
         -webkit-transform: rotateX(-20deg) rotateY(0deg);
@@ -53,6 +60,24 @@
         -webkit-transform-origin: 10rem 10rem 0;
         transform-origin: 10rem 10rem 0;
         border: 5px solid darksalmon;
+    }
+    .list-box{
+        width: 100%;
+        height: auto;
+    }
+    .list-box ul{
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+        padding: 2rem 0;
+    }
+    .list-box ul li{
+        width: 98%;
+        margin: 0 auto;
+        height: 7rem;
+        box-shadow: 1px 3px 5px #ccc;
+        border-radius: 8px;
+        background: #fcfcfc;
     }
 </style>
 

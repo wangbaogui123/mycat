@@ -1,18 +1,18 @@
 webpackJsonp([0],{
 
-/***/ 50:
+/***/ 51:
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(66)
+  __webpack_require__(71)
 }
-var Component = __webpack_require__(51)(
+var Component = __webpack_require__(53)(
   /* script */
-  __webpack_require__(58),
+  __webpack_require__(60),
   /* template */
-  __webpack_require__(63),
+  __webpack_require__(67),
   /* styles */
   injectStyle,
   /* scopeId */
@@ -45,7 +45,44 @@ module.exports = Component.exports
 
 /***/ }),
 
-/***/ 51:
+/***/ 52:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+/**
+ * Translates the list format produced by css-loader into something
+ * easier to manipulate.
+ */
+
+module.exports = function listToStyles(parentId, list) {
+  var styles = [];
+  var newStyles = {};
+  for (var i = 0; i < list.length; i++) {
+    var item = list[i];
+    var id = item[0];
+    var css = item[1];
+    var media = item[2];
+    var sourceMap = item[3];
+    var part = {
+      id: parentId + ':' + i,
+      css: css,
+      media: media,
+      sourceMap: sourceMap
+    };
+    if (!newStyles[id]) {
+      styles.push(newStyles[id] = { id: id, parts: [part] });
+    } else {
+      newStyles[id].parts.push(part);
+    }
+  }
+  return styles;
+};
+
+/***/ }),
+
+/***/ 53:
 /***/ (function(module, exports) {
 
 /* globals __VUE_SSR_CONTEXT__ */
@@ -143,44 +180,7 @@ module.exports = function normalizeComponent (
 
 /***/ }),
 
-/***/ 52:
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-/**
- * Translates the list format produced by css-loader into something
- * easier to manipulate.
- */
-
-module.exports = function listToStyles(parentId, list) {
-  var styles = [];
-  var newStyles = {};
-  for (var i = 0; i < list.length; i++) {
-    var item = list[i];
-    var id = item[0];
-    var css = item[1];
-    var media = item[2];
-    var sourceMap = item[3];
-    var part = {
-      id: parentId + ':' + i,
-      css: css,
-      media: media,
-      sourceMap: sourceMap
-    };
-    if (!newStyles[id]) {
-      styles.push(newStyles[id] = { id: id, parts: [part] });
-    } else {
-      newStyles[id].parts.push(part);
-    }
-  }
-  return styles;
-};
-
-/***/ }),
-
-/***/ 55:
+/***/ 54:
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -402,7 +402,7 @@ function applyToTag (styleElement, obj) {
 
 /***/ }),
 
-/***/ 58:
+/***/ 60:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -446,7 +446,7 @@ exports.default = {
 
 /***/ }),
 
-/***/ 59:
+/***/ 61:
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(2)(undefined);
@@ -454,28 +454,28 @@ exports = module.exports = __webpack_require__(2)(undefined);
 
 
 // module
-exports.push([module.i, "\n.onebox{\n    margin:0px;\n    width: 100%;\n    height: 100%;\n    position: fixed;\n    top: 0;\n    right: 0;\n    bottom: 0;\n    left: 0;\n    overflow: hidden;\n    outline: 0;\n    -webkit-overflow-scrolling: touch;\n    background-color:#fff;\n    font-family:'PingFangSC-Medium';\n    font-weight: normal; \n    box-shadow:0 0 5px #fff inset;\n    /* background: #62d8b6; */\n}\n.onebox .logobox{\n    position: relative;\n    z-index: 2;\n    width: 100%;\n    height: auto;\n    background: #fff;\n    padding: 50px 0;\n}\n.onebox .btngo{\n    width: 50%;\n    height: 50px;\n    z-index: 2;\n    position: relative;\n    border-radius:15px;\n    background: #7de8ad;\n    line-height: 50px;\n    margin: 100px auto;\n    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; \n    font-size: 25px;\n    box-shadow: 1px 2px 5px #333;\n}\n.onebox .logobox img{\n    display: block;\n    width: 100%;\n    height: auto;\n    position: relative;\n    z-index: 2;\n}\n.onebox .mov-btn{\n    position: absolute;\n    z-index: 1;\n    background: #fff;\n    bottom:0;\n    left:0;\n    background: url(" + __webpack_require__(61) + ");\n    background-size: 100% 100%; \n    /* width: 20px;\n    height: 20px;\n    border-radius: 10px; */\n}\n.onebox .top{\n    background: rgba(0,0,0,0);\n    color:#fff;\n    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;\n}\n.onebox .top span{\n    float: right;\n    margin-right: 50px;\n    text-shadow: 1px 1px 3px #676767;\n}\n.onebox canvas{\n    position: absolute;\n    top:0;\n    left:0;\n    width: 100%;\n    height: 100%;\n}\n", ""]);
+exports.push([module.i, "\n.onebox{\n    margin:0px;\n    width: 100%;\n    height: 100%;\n    position: fixed;\n    top: 0;\n    right: 0;\n    bottom: 0;\n    left: 0;\n    overflow: hidden;\n    outline: 0;\n    -webkit-overflow-scrolling: touch;\n    background-color:#fff;\n    font-family:'PingFangSC-Medium';\n    font-weight: normal; \n    box-shadow:0 0 5px #fff inset;\n    /* background: #62d8b6; */\n}\n.onebox .logobox{\n    position: relative;\n    z-index: 2;\n    width: 100%;\n    height: auto;\n    background: #fff;\n    padding: 50px 0;\n}\n.onebox .btngo{\n    width: 50%;\n    height: 50px;\n    z-index: 2;\n    position: relative;\n    border-radius:15px;\n    background: #7de8ad;\n    line-height: 50px;\n    margin: 100px auto;\n    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; \n    font-size: 25px;\n    box-shadow: 1px 2px 5px #333;\n}\n.onebox .logobox img{\n    display: block;\n    width: 100%;\n    height: auto;\n    position: relative;\n    z-index: 2;\n}\n.onebox .mov-btn{\n    position: absolute;\n    z-index: 1;\n    background: #fff;\n    bottom:0;\n    left:0;\n    background: url(" + __webpack_require__(65) + ");\n    background-size: 100% 100%; \n    /* width: 20px;\n    height: 20px;\n    border-radius: 10px; */\n}\n.onebox .top{\n    background: rgba(0,0,0,0);\n    color:#fff;\n    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;\n}\n.onebox .top span{\n    float: right;\n    margin-right: 50px;\n    text-shadow: 1px 1px 3px #676767;\n}\n.onebox canvas{\n    position: absolute;\n    top:0;\n    left:0;\n    width: 100%;\n    height: 100%;\n}\n", ""]);
 
 // exports
 
 
 /***/ }),
 
-/***/ 61:
+/***/ 65:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "btnbg.jpeg";
 
 /***/ }),
 
-/***/ 62:
+/***/ 66:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "logo.png";
 
 /***/ }),
 
-/***/ 63:
+/***/ 67:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -493,7 +493,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     staticClass: "logobox"
   }, [_c('img', {
     attrs: {
-      "src": __webpack_require__(62),
+      "src": __webpack_require__(66),
       "alt": ""
     }
   })]) : _vm._e(), _vm._v(" "), (_vm.data.shownum == '0' && _vm.data.time == '0') ? _c('p', {
@@ -510,17 +510,17 @@ if (false) {
 
 /***/ }),
 
-/***/ 66:
+/***/ 71:
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(59);
+var content = __webpack_require__(61);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(55)("76c88a48", content, false);
+var update = __webpack_require__(54)("76c88a48", content, false);
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
