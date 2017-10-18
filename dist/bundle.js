@@ -29,7 +29,7 @@
 /******/
 /******/ 	// objects to store loaded and loading chunks
 /******/ 	var installedChunks = {
-/******/ 		4: 0
+/******/ 		5: 0
 /******/ 	};
 /******/
 /******/ 	// The require function
@@ -144,7 +144,7 @@
 /******/ 	__webpack_require__.oe = function(err) { console.error(err); throw err; };
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 20);
+/******/ 	return __webpack_require__(__webpack_require__.s = 21);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -161,7 +161,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 };
 
 var bind = __webpack_require__(8);
-var isBuffer = __webpack_require__(38);
+var isBuffer = __webpack_require__(39);
 
 /*global toString:true*/
 
@@ -467,7 +467,7 @@ module.exports = {
 /* WEBPACK VAR INJECTION */(function(process) {
 
 var utils = __webpack_require__(0);
-var normalizeHeaderName = __webpack_require__(35);
+var normalizeHeaderName = __webpack_require__(36);
 
 var DEFAULT_CONTENT_TYPE = {
   'Content-Type': 'application/x-www-form-urlencoded'
@@ -550,7 +550,7 @@ utils.forEach(['post', 'put', 'patch'], function forEachMethodWithData(method) {
 });
 
 module.exports = defaults;
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(39)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(40)))
 
 /***/ }),
 /* 2 */
@@ -673,7 +673,7 @@ var stylesInDom = {},
 	singletonElement = null,
 	singletonCounter = 0,
 	styleElementsInsertedAtTop = [],
-	fixUrls = __webpack_require__(40);
+	fixUrls = __webpack_require__(41);
 
 module.exports = function(list, options) {
 	if(typeof DEBUG !== "undefined" && DEBUG) {
@@ -956,12 +956,12 @@ function updateLink(linkElement, options, obj) {
 
 
 var utils = __webpack_require__(0);
-var settle = __webpack_require__(27);
-var buildURL = __webpack_require__(30);
-var parseHeaders = __webpack_require__(36);
-var isURLSameOrigin = __webpack_require__(34);
+var settle = __webpack_require__(28);
+var buildURL = __webpack_require__(31);
+var parseHeaders = __webpack_require__(37);
+var isURLSameOrigin = __webpack_require__(35);
 var createError = __webpack_require__(7);
-var btoa = typeof window !== 'undefined' && window.btoa && window.btoa.bind(window) || __webpack_require__(29);
+var btoa = typeof window !== 'undefined' && window.btoa && window.btoa.bind(window) || __webpack_require__(30);
 
 module.exports = function xhrAdapter(config) {
   return new Promise(function dispatchXhrRequest(resolve, reject) {
@@ -1054,7 +1054,7 @@ module.exports = function xhrAdapter(config) {
     // This is only done if running in a standard browser environment.
     // Specifically not if we're in a web worker, or react-native.
     if (utils.isStandardBrowserEnv()) {
-      var cookies = __webpack_require__(32);
+      var cookies = __webpack_require__(33);
 
       // Add xsrf header
       var xsrfValue = (config.withCredentials || isURLSameOrigin(config.url)) && config.xsrfCookieName ? cookies.read(config.xsrfCookieName) : undefined;
@@ -1172,7 +1172,7 @@ module.exports = function isCancel(value) {
 "use strict";
 
 
-var enhanceError = __webpack_require__(26);
+var enhanceError = __webpack_require__(27);
 
 /**
  * Create an Error with the specified message, config, error code, request and response.
@@ -1392,7 +1392,7 @@ module.exports = function (Vue) {
 		page: "我的萌宠"
 	};
 
-	var toptpl = __webpack_require__(45);
+	var toptpl = __webpack_require__(46);
 
 	// 注册组件my-top
 	Vue.component("my-top", {
@@ -1602,16 +1602,19 @@ exports.default = function () {
   // 1. 定义（路由）组件。
   // 可以从其他文件 import 进来
   var home = function home() {
-    return __webpack_require__.e/* import() */(1).then(__webpack_require__.bind(null, 50));
+    return __webpack_require__.e/* import() */(1).then(__webpack_require__.bind(null, 51));
   };
   var one = function one() {
-    return __webpack_require__.e/* import() */(0).then(__webpack_require__.bind(null, 51));
+    return __webpack_require__.e/* import() */(0).then(__webpack_require__.bind(null, 52));
   };
   var detail = function detail() {
-    return __webpack_require__.e/* import() */(2).then(__webpack_require__.bind(null, 49));
+    return __webpack_require__.e/* import() */(2).then(__webpack_require__.bind(null, 50));
   };
   var activity = function activity() {
-    return __webpack_require__.e/* import() */(3).then(__webpack_require__.bind(null, 48));
+    return __webpack_require__.e/* import() */(3).then(__webpack_require__.bind(null, 49));
+  };
+  var showimages = function showimages() {
+    return __webpack_require__.e/* import() */(4).then(__webpack_require__.bind(null, 53));
   };
 
   // 2. 定义路由
@@ -1619,7 +1622,7 @@ exports.default = function () {
   // 通过 Vue.extend() 创建的组件构造器，
   // 或者，只是一个组件配置对象。
   // 我们晚点再讨论嵌套路由。
-  var routes = [{ path: '/', component: home }, { path: '/one', component: one }, { path: '/detail/:id', name: "detail", component: detail }, { path: '/activity/:id', name: "activity", component: activity }];
+  var routes = [{ path: '/', component: home }, { path: '/one', component: one }, { path: '/detail/:id', name: "detail", component: detail }, { path: '/activity/:id', name: "activity", component: activity }, { path: '/showimg', name: "showimg", component: showimages }];
 
   return routes;
 };
@@ -1631,10 +1634,118 @@ exports.default = function () {
 "use strict";
 
 
-module.exports = __webpack_require__(21);
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+//Vue 自定义指令
+exports.default = function (Vue) {
+    var options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+
+    var elearr = [];
+
+    var addListener = function addListener(ele, binding) {
+
+        bindEvt(ele, binding);
+    };
+
+    function bindEvt(ele, binding) {
+
+        var data = binding.value;
+
+        // 绑定事件
+        ele.addEventListener("click", showMaximg, false);
+
+        // 点击事件
+        function showMaximg() {
+
+            // 是否存在
+
+            var lary = document.createElement("div"),
+                laryul = document.createElement("ul"),
+                laryli = "",
+                ww = window.innerWidth;
+
+            for (var i = 0; i < data.length; i++) {
+                laryli += "<li style='width:" + ww + "px'><img src=" + data[i].imgurl + "></li>";
+            }
+
+            laryul.innerHTML = laryli;
+
+            laryul.setAttribute("style", "width:" + 100 * data.length + "%");
+            lary.appendChild(laryul);
+            lary.setAttribute("class", "lary");
+            document.body.appendChild(lary);
+
+            // 滑动事件
+            move(lary, laryul, data.length);
+        }
+    }
+
+    function move(par, ul, len) {
+
+        var startX = 0;
+        var box = par;
+        var ulbox = ul;
+        var index = 0;
+        var w = -window.innerWidth;
+
+        box.addEventListener("touchstart", toustart, false);
+        box.addEventListener("touchmove", toumove, false);
+        box.addEventListener("touchend", touend, false);
+
+        function toustart(event) {
+            event.preventDefault();
+            startX = event.touches[0].pageX;
+        }
+        function toumove(event) {
+
+            event.preventDefault();
+            var x = (event.touches[0].pageX - startX) * 1;
+            ulbox.setAttribute("style", "width:" + 100 * len + "%;transform: translate3d(" + (index * w + x) + "px,0,0);transition: none;");
+        }
+        function touend(event) {
+            event.preventDefault();
+            var endx = event.changedTouches[0].pageX;
+
+            if (endx - startX > 10) {
+                index--;
+                if (index <= 0) {
+                    index = 0;
+                }
+                ulbox.setAttribute("style", "width:" + 100 * len + "%;transform: translate3d(" + index * w + "px,0,0);transition: all .5s ease-in-out;");
+            } else if (endx - startX < -10) {
+                index++;
+                if (index >= len - 1) {
+                    index = len - 1;
+                }
+                ulbox.setAttribute("style", "width:" + 100 * len + "%;transform: translate3d(" + index * w + "px,0,0);transition: all .5s ease-in-out;");
+            } else {
+                if (endx - startX == 0) {
+                    document.body.removeChild(box);
+                }
+                ulbox.setAttribute("style", "width:" + 100 * len + "%;transform: translate3d(" + index * w + "px,0,0);transition: all .5s ease-in-out;");
+            }
+        }
+    }
+
+    Vue.directive('maximg', {
+        inserted: addListener,
+        updated: addListener
+    });
+};
 
 /***/ }),
 /* 15 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+module.exports = __webpack_require__(22);
+
+/***/ }),
+/* 16 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3983,7 +4094,7 @@ if (inBrowser && window.Vue) {
 exports.default = VueRouter;
 
 /***/ }),
-/* 16 */
+/* 17 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4184,10 +4295,10 @@ var _typeof = typeof Symbol === "function" && _typeof2(Symbol.iterator) === "sym
       }, staticRenderFns: [] };
   }]);
 });
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(42)(module)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(43)(module)))
 
 /***/ }),
-/* 17 */
+/* 18 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13367,16 +13478,16 @@ function getOuterHTML(el) {
 Vue$3.compile = compileToFunctions;
 
 exports.default = Vue$3;
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(41)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(42)))
 
 /***/ }),
-/* 18 */
+/* 19 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(43);
+var content = __webpack_require__(44);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // Prepare cssTransformation
 var transform;
@@ -13401,13 +13512,13 @@ if(false) {
 }
 
 /***/ }),
-/* 19 */
+/* 20 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(44);
+var content = __webpack_require__(45);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // Prepare cssTransformation
 var transform;
@@ -13432,13 +13543,13 @@ if(false) {
 }
 
 /***/ }),
-/* 20 */
+/* 21 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var _vue = __webpack_require__(17);
+var _vue = __webpack_require__(18);
 
 var _vue2 = _interopRequireDefault(_vue);
 
@@ -13446,11 +13557,11 @@ var _router = __webpack_require__(13);
 
 var _router2 = _interopRequireDefault(_router);
 
-var _axios = __webpack_require__(14);
+var _axios = __webpack_require__(15);
 
 var _axios2 = _interopRequireDefault(_axios);
 
-var _vueRouter = __webpack_require__(15);
+var _vueRouter = __webpack_require__(16);
 
 var _vueRouter2 = _interopRequireDefault(_vueRouter);
 
@@ -13458,7 +13569,7 @@ var _canvasone = __webpack_require__(9);
 
 var _canvasone2 = _interopRequireDefault(_canvasone);
 
-var _vueSwipe = __webpack_require__(16);
+var _vueSwipe = __webpack_require__(17);
 
 var _lazyLoad = __webpack_require__(11);
 
@@ -13467,6 +13578,10 @@ var _lazyLoad2 = _interopRequireDefault(_lazyLoad);
 var _move = __webpack_require__(12);
 
 var _move2 = _interopRequireDefault(_move);
+
+var _showimg = __webpack_require__(14);
+
+var _showimg2 = _interopRequireDefault(_showimg);
 
 function _interopRequireDefault(obj) {
 	return obj && obj.__esModule ? obj : { default: obj };
@@ -13477,14 +13592,15 @@ _vue2.default.prototype.$ajax = _axios2.default;
 _vue2.default.component('swipe', _vueSwipe.Swipe);
 _vue2.default.component('swipe-item', _vueSwipe.SwipeItem);
 
-__webpack_require__(18);
 __webpack_require__(19);
+__webpack_require__(20);
 __webpack_require__(10)(_vue2.default);
 
 _vue2.default.use(_vueRouter2.default);
 _vue2.default.use(_canvasone2.default);
 _vue2.default.use(_lazyLoad2.default);
 _vue2.default.use(_move2.default);
+_vue2.default.use(_showimg2.default);
 
 var routes = (0, _router2.default)();
 
@@ -13523,7 +13639,7 @@ window.addEventListener('popstate', function () {
 });
 
 /***/ }),
-/* 21 */
+/* 22 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13531,7 +13647,7 @@ window.addEventListener('popstate', function () {
 
 var utils = __webpack_require__(0);
 var bind = __webpack_require__(8);
-var Axios = __webpack_require__(23);
+var Axios = __webpack_require__(24);
 var defaults = __webpack_require__(1);
 
 /**
@@ -13566,14 +13682,14 @@ axios.create = function create(instanceConfig) {
 
 // Expose Cancel & CancelToken
 axios.Cancel = __webpack_require__(5);
-axios.CancelToken = __webpack_require__(22);
+axios.CancelToken = __webpack_require__(23);
 axios.isCancel = __webpack_require__(6);
 
 // Expose all/spread
 axios.all = function all(promises) {
   return Promise.all(promises);
 };
-axios.spread = __webpack_require__(37);
+axios.spread = __webpack_require__(38);
 
 module.exports = axios;
 
@@ -13581,7 +13697,7 @@ module.exports = axios;
 module.exports.default = axios;
 
 /***/ }),
-/* 22 */
+/* 23 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13644,7 +13760,7 @@ CancelToken.source = function source() {
 module.exports = CancelToken;
 
 /***/ }),
-/* 23 */
+/* 24 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13652,10 +13768,10 @@ module.exports = CancelToken;
 
 var defaults = __webpack_require__(1);
 var utils = __webpack_require__(0);
-var InterceptorManager = __webpack_require__(24);
-var dispatchRequest = __webpack_require__(25);
-var isAbsoluteURL = __webpack_require__(33);
-var combineURLs = __webpack_require__(31);
+var InterceptorManager = __webpack_require__(25);
+var dispatchRequest = __webpack_require__(26);
+var isAbsoluteURL = __webpack_require__(34);
+var combineURLs = __webpack_require__(32);
 
 /**
  * Create a new instance of Axios
@@ -13736,7 +13852,7 @@ utils.forEach(['post', 'put', 'patch'], function forEachMethodWithData(method) {
 module.exports = Axios;
 
 /***/ }),
-/* 24 */
+/* 25 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13794,14 +13910,14 @@ InterceptorManager.prototype.forEach = function forEach(fn) {
 module.exports = InterceptorManager;
 
 /***/ }),
-/* 25 */
+/* 26 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
 var utils = __webpack_require__(0);
-var transformData = __webpack_require__(28);
+var transformData = __webpack_require__(29);
 var isCancel = __webpack_require__(6);
 var defaults = __webpack_require__(1);
 
@@ -13860,7 +13976,7 @@ module.exports = function dispatchRequest(config) {
 };
 
 /***/ }),
-/* 26 */
+/* 27 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13888,7 +14004,7 @@ module.exports = function enhanceError(error, config, code, request, response) {
 };
 
 /***/ }),
-/* 27 */
+/* 28 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13914,7 +14030,7 @@ module.exports = function settle(resolve, reject, response) {
 };
 
 /***/ }),
-/* 28 */
+/* 29 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13940,7 +14056,7 @@ module.exports = function transformData(data, headers, fns) {
 };
 
 /***/ }),
-/* 29 */
+/* 30 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13981,7 +14097,7 @@ function btoa(input) {
 module.exports = btoa;
 
 /***/ }),
-/* 30 */
+/* 31 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14048,7 +14164,7 @@ module.exports = function buildURL(url, params, paramsSerializer) {
 };
 
 /***/ }),
-/* 31 */
+/* 32 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14067,7 +14183,7 @@ module.exports = function combineURLs(baseURL, relativeURL) {
 };
 
 /***/ }),
-/* 32 */
+/* 33 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14126,7 +14242,7 @@ function nonStandardBrowserEnv() {
 }();
 
 /***/ }),
-/* 33 */
+/* 34 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14148,7 +14264,7 @@ module.exports = function isAbsoluteURL(url) {
 };
 
 /***/ }),
-/* 34 */
+/* 35 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14217,7 +14333,7 @@ function nonStandardBrowserEnv() {
 }();
 
 /***/ }),
-/* 35 */
+/* 36 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14235,7 +14351,7 @@ module.exports = function normalizeHeaderName(headers, normalizedName) {
 };
 
 /***/ }),
-/* 36 */
+/* 37 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14280,7 +14396,7 @@ module.exports = function parseHeaders(headers) {
 };
 
 /***/ }),
-/* 37 */
+/* 38 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14314,7 +14430,7 @@ module.exports = function spread(callback) {
 };
 
 /***/ }),
-/* 38 */
+/* 39 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14344,7 +14460,7 @@ function isSlowBuffer(obj) {
 }
 
 /***/ }),
-/* 39 */
+/* 40 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14538,7 +14654,7 @@ process.umask = function () {
 };
 
 /***/ }),
-/* 40 */
+/* 41 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14633,7 +14749,7 @@ module.exports = function (css) {
 };
 
 /***/ }),
-/* 41 */
+/* 42 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14667,7 +14783,7 @@ try {
 module.exports = g;
 
 /***/ }),
-/* 42 */
+/* 43 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14697,7 +14813,7 @@ module.exports = function (module) {
 };
 
 /***/ }),
-/* 43 */
+/* 44 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(2)(undefined);
@@ -14711,7 +14827,7 @@ exports.push([module.i, "body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,f
 
 
 /***/ }),
-/* 44 */
+/* 45 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(2)(undefined);
@@ -14725,19 +14841,19 @@ exports.push([module.i, ".top{\n\twidth: 100%;\n\theight: auto;\n\tposition: fix
 
 
 /***/ }),
-/* 45 */
+/* 46 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = "\n<div class=\"top\">\n\n    <div class=\"top-bar\">\n\n        <router-link to=\"/\">\n            <img src=\"" + __webpack_require__(46) + "\" />\n        </router-link>\n\n        <p>{{page}}</p>\n        \n        <a class=\"right\" v-on:click=\"topFun()\">\n            <img src=\"" + __webpack_require__(47) + "\" />\n        </a>\n    </div>\n    \n    <div class=\"top-cont bg-box\" v-if = \"topShow\">\n\n        <div class=\"login-box\">\n        <p> \n            <router-link to=\"/activity\" class='colorMove'>\n                最新活动\n            </router-link>\n        </p>   \n        </div>      \n    </div>\n</div>\n\n";
+module.exports = "\n<div class=\"top\">\n\n    <div class=\"top-bar\">\n\n        <router-link to=\"/\">\n            <img src=\"" + __webpack_require__(47) + "\" />\n        </router-link>\n\n        <p>{{page}}</p>\n        \n        <a class=\"right\" v-on:click=\"topFun()\">\n            <img src=\"" + __webpack_require__(48) + "\" />\n        </a>\n    </div>\n    \n    <div class=\"top-cont bg-box\" v-if = \"topShow\">\n\n        <div class=\"login-box\">\n        <p> \n            <router-link to=\"/activity\" class='colorMove'>\n                最新活动\n            </router-link>\n        </p>   \n        </div>      \n    </div>\n</div>\n\n";
 
 /***/ }),
-/* 46 */
+/* 47 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "cat.png";
 
 /***/ }),
-/* 47 */
+/* 48 */
 /***/ (function(module, exports) {
 
 module.exports = "data:image/png;base64,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"

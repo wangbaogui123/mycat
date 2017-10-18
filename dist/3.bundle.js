@@ -1,18 +1,18 @@
 webpackJsonp([3],{
 
-/***/ 48:
+/***/ 49:
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(74)
+  __webpack_require__(79)
 }
-var Component = __webpack_require__(53)(
+var Component = __webpack_require__(55)(
   /* script */
-  __webpack_require__(57),
+  __webpack_require__(59),
   /* template */
-  __webpack_require__(70),
+  __webpack_require__(74),
   /* styles */
   injectStyle,
   /* scopeId */
@@ -45,7 +45,7 @@ module.exports = Component.exports
 
 /***/ }),
 
-/***/ 52:
+/***/ 54:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -82,7 +82,7 @@ module.exports = function listToStyles(parentId, list) {
 
 /***/ }),
 
-/***/ 53:
+/***/ 55:
 /***/ (function(module, exports) {
 
 /* globals __VUE_SSR_CONTEXT__ */
@@ -180,7 +180,7 @@ module.exports = function normalizeComponent (
 
 /***/ }),
 
-/***/ 54:
+/***/ 56:
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -199,7 +199,7 @@ if (typeof DEBUG !== 'undefined' && DEBUG) {
   ) }
 }
 
-var listToStyles = __webpack_require__(52)
+var listToStyles = __webpack_require__(54)
 
 /*
 type StyleObject = {
@@ -402,7 +402,7 @@ function applyToTag (styleElement, obj) {
 
 /***/ }),
 
-/***/ 55:
+/***/ 57:
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(2)(undefined);
@@ -417,13 +417,13 @@ exports.push([module.i, ".box{padding-bottom:0; box-shadow: 1px 3px 5px #ccc;bac
 
 /***/ }),
 
-/***/ 56:
+/***/ 58:
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(55);
+var content = __webpack_require__(57);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // Prepare cssTransformation
 var transform;
@@ -449,7 +449,7 @@ if(false) {
 
 /***/ }),
 
-/***/ 57:
+/***/ 59:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -505,7 +505,7 @@ Object.defineProperty(exports, "__esModule", {
 //
 
 
-__webpack_require__(56);
+__webpack_require__(58);
 
 var homeData = {
 
@@ -553,7 +553,7 @@ exports.default = {
 
 /***/ }),
 
-/***/ 64:
+/***/ 67:
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(2)(undefined);
@@ -568,7 +568,7 @@ exports.push([module.i, "\n.animate-box2 {\n    position: relative;\n    width: 
 
 /***/ }),
 
-/***/ 70:
+/***/ 74:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -601,17 +601,17 @@ if (false) {
 
 /***/ }),
 
-/***/ 74:
+/***/ 79:
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(64);
+var content = __webpack_require__(67);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(54)("32594bd2", content, false);
+var update = __webpack_require__(56)("32594bd2", content, false);
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags

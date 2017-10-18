@@ -8,6 +8,7 @@ export default () => {
   const one = () => import("./views/One.vue");
   const detail = () => import("./views/Detail.vue");
   const activity = () => import("./views/Activity.vue");  
+  const showimages = () => import("./views/Showimage.vue");
 
   // 2. 定义路由
   // 每个路由应该映射一个组件。 其中"component" 可以是
@@ -19,6 +20,7 @@ export default () => {
     { path: '/one', component: one },
     { path: '/detail/:id',name:"detail", component:detail},
     { path: '/activity/:id',name:"activity", component:activity},
+    { path: '/showimg',name:"showimg", component:showimages}
   ]
 
   return routes;

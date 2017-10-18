@@ -1,18 +1,18 @@
 webpackJsonp([4],{
 
-/***/ 48:
+/***/ 53:
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(64)
+  __webpack_require__(80)
 }
-var Component = __webpack_require__(49)(
+var Component = __webpack_require__(55)(
   /* script */
-  __webpack_require__(56),
+  __webpack_require__(63),
   /* template */
-  __webpack_require__(61),
+  __webpack_require__(75),
   /* styles */
   injectStyle,
   /* scopeId */
@@ -20,9 +20,9 @@ var Component = __webpack_require__(49)(
   /* moduleIdentifier (server only) */
   null
 )
-Component.options.__file = "/Users/wangbaogui/wbg/mycat/app/views/One.vue"
+Component.options.__file = "/Users/wangbaogui/wbg/mycat/app/views/Showimage.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key.substr(0, 2) !== "__"})) {console.error("named exports are not supported in *.vue files.")}
-if (Component.options.functional) {console.error("[vue-loader] One.vue: functional components are not supported with templates, they should use render functions.")}
+if (Component.options.functional) {console.error("[vue-loader] Showimage.vue: functional components are not supported with templates, they should use render functions.")}
 
 /* hot reload */
 if (false) {(function () {
@@ -31,9 +31,9 @@ if (false) {(function () {
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-5d124218", Component.options)
+    hotAPI.createRecord("data-v-d64f0ee8", Component.options)
   } else {
-    hotAPI.reload("data-v-5d124218", Component.options)
+    hotAPI.reload("data-v-d64f0ee8", Component.options)
   }
   module.hot.dispose(function (data) {
     disposed = true
@@ -45,7 +45,44 @@ module.exports = Component.exports
 
 /***/ }),
 
-/***/ 49:
+/***/ 54:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+/**
+ * Translates the list format produced by css-loader into something
+ * easier to manipulate.
+ */
+
+module.exports = function listToStyles(parentId, list) {
+  var styles = [];
+  var newStyles = {};
+  for (var i = 0; i < list.length; i++) {
+    var item = list[i];
+    var id = item[0];
+    var css = item[1];
+    var media = item[2];
+    var sourceMap = item[3];
+    var part = {
+      id: parentId + ':' + i,
+      css: css,
+      media: media,
+      sourceMap: sourceMap
+    };
+    if (!newStyles[id]) {
+      styles.push(newStyles[id] = { id: id, parts: [part] });
+    } else {
+      newStyles[id].parts.push(part);
+    }
+  }
+  return styles;
+};
+
+/***/ }),
+
+/***/ 55:
 /***/ (function(module, exports) {
 
 /* globals __VUE_SSR_CONTEXT__ */
@@ -143,44 +180,7 @@ module.exports = function normalizeComponent (
 
 /***/ }),
 
-/***/ 50:
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-/**
- * Translates the list format produced by css-loader into something
- * easier to manipulate.
- */
-
-module.exports = function listToStyles(parentId, list) {
-  var styles = [];
-  var newStyles = {};
-  for (var i = 0; i < list.length; i++) {
-    var item = list[i];
-    var id = item[0];
-    var css = item[1];
-    var media = item[2];
-    var sourceMap = item[3];
-    var part = {
-      id: parentId + ':' + i,
-      css: css,
-      media: media,
-      sourceMap: sourceMap
-    };
-    if (!newStyles[id]) {
-      styles.push(newStyles[id] = { id: id, parts: [part] });
-    } else {
-      newStyles[id].parts.push(part);
-    }
-  }
-  return styles;
-};
-
-/***/ }),
-
-/***/ 53:
+/***/ 56:
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -199,7 +199,7 @@ if (typeof DEBUG !== 'undefined' && DEBUG) {
   ) }
 }
 
-var listToStyles = __webpack_require__(50)
+var listToStyles = __webpack_require__(54)
 
 /*
 type StyleObject = {
@@ -402,7 +402,7 @@ function applyToTag (styleElement, obj) {
 
 /***/ }),
 
-/***/ 56:
+/***/ 63:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -425,13 +425,58 @@ Object.defineProperty(exports, "__esModule", {
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 var homeData = {
-    data: {
-        shownum: 0,
-        time: 0
-    }
+
+    itemArr: [{ "imgurl": "http://i1.cctcdn.cn/up/i/1607/27/8c8eeffb9a02.jpg_448x299q80.jpg" }, { "imgurl": "http://i1.cctcdn.cn/up/i/1607/27/8c8eeffb9a02.jpg_448x299q80.jpg" }, { "imgurl": "http://i1.cctcdn.cn/up/i/1607/27/8c8eeffb9a02.jpg_448x299q80.jpg" }]
+
 };
 
 exports.default = {
@@ -439,14 +484,16 @@ exports.default = {
     data: function data() {
         return homeData;
     },
-    created: function created() {},
-    methods: {}
+    created: function created() {
+        var _this = this;
+        var $this = this.$parent;
+    }
 
 };
 
 /***/ }),
 
-/***/ 57:
+/***/ 68:
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(2)(undefined);
@@ -454,79 +501,69 @@ exports = module.exports = __webpack_require__(2)(undefined);
 
 
 // module
-exports.push([module.i, "\n.onebox{\n    margin:0px;\n    width: 100%;\n    height: 100%;\n    position: fixed;\n    top: 0;\n    right: 0;\n    bottom: 0;\n    left: 0;\n    overflow: hidden;\n    outline: 0;\n    -webkit-overflow-scrolling: touch;\n    background-color:#fff;\n    font-family:'PingFangSC-Medium';\n    font-weight: normal; \n    box-shadow:0 0 5px #fff inset;\n    /* background: #62d8b6; */\n}\n.onebox .logobox{\n    position: relative;\n    z-index: 2;\n    width: 100%;\n    height: auto;\n    background: #fff;\n    padding: 50px 0;\n}\n.onebox .btngo{\n    width: 50%;\n    height: 50px;\n    z-index: 2;\n    position: relative;\n    border-radius:15px;\n    background: #7de8ad;\n    line-height: 50px;\n    margin: 100px auto;\n    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; \n    font-size: 25px;\n    box-shadow: 1px 2px 5px #333;\n}\n.onebox .logobox img{\n    display: block;\n    width: 100%;\n    height: auto;\n    position: relative;\n    z-index: 2;\n}\n.onebox .mov-btn{\n    position: absolute;\n    z-index: 1;\n    background: #fff;\n    bottom:0;\n    left:0;\n    background: url(" + __webpack_require__(59) + ");\n    background-size: 100% 100%; \n    /* width: 20px;\n    height: 20px;\n    border-radius: 10px; */\n}\n.onebox .top{\n    background: rgba(0,0,0,0);\n    color:#fff;\n    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;\n}\n.onebox .top span{\n    float: right;\n    margin-right: 50px;\n    text-shadow: 1px 1px 3px #676767;\n}\n.onebox canvas{\n    position: absolute;\n    top:0;\n    left:0;\n    width: 100%;\n    height: 100%;\n}\n", ""]);
+exports.push([module.i, "\n.showimgbox{\n    width: 100%;\n    height: 5rem;\n}\n.showimgbox li{\n    float: left;\n    width: 20%;\n    height: 100%;\n    margin: 0 1rem;\n}\n.showimgbox li img{\n    display: block;\n    width: 100%;\n    height: auto;\n}\n.lary{\n    position: fixed;\n    top: 0;\n    left: 0;\n    width: 100%;\n    height: 100%;\n    z-index: 100;\n    background: rgba(0, 0, 0, 0.6);\n    overflow: hidden;\n}\n.lary ul{\n    transform: translate3d(0,0,0);\n    height: 100%;\n}\n.lary ul li{\n    float: left;\n}\n.lary ul li img{\n    margin-top: 30%;\n    display: block;\n    width: 100%;\n}\n", ""]);
 
 // exports
 
 
 /***/ }),
 
-/***/ 59:
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "btnbg.jpeg";
-
-/***/ }),
-
-/***/ 60:
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "logo.png";
-
-/***/ }),
-
-/***/ 61:
+/***/ 75:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', [_c('div', {
-    directives: [{
-      name: "canvasone",
-      rawName: "v-canvasone",
-      value: (_vm.data),
-      expression: "data"
-    }],
-    staticClass: "onebox"
-  }, [(_vm.data.shownum != '0' && _vm.data.time != '0') ? _c('p', {
-    staticClass: "top"
-  }, [_c('span', [_vm._v("体积：" + _vm._s(_vm.data.shownum) + "g")]), _vm._v(" "), _c('span', [_vm._v("时间：" + _vm._s(_vm.data.time) + "s")])]) : _vm._e(), _vm._v(" "), (_vm.data.shownum == '0' && _vm.data.time == '0') ? _c('p', {
-    staticClass: "logobox"
-  }, [_c('img', {
+  return _c('div', [_c('my-top', {
     attrs: {
-      "src": __webpack_require__(60),
-      "alt": ""
+      "top-show": _vm.topshow
     }
-  })]) : _vm._e(), _vm._v(" "), (_vm.data.shownum == '0' && _vm.data.time == '0') ? _c('p', {
-    staticClass: "btngo"
-  }, [_vm._v("立即试玩")]) : _vm._e()])])
+  }), _vm._v(" "), _c('div', {
+    staticClass: "box"
+  }, [_c('ul', {
+    directives: [{
+      name: "maximg",
+      rawName: "v-maximg",
+      value: (_vm.itemArr),
+      expression: "itemArr"
+    }],
+    staticClass: "showimgbox"
+  }, _vm._l((_vm.itemArr), function(item) {
+    return _c('li', {
+      key: item.$inex
+    }, [_c('img', {
+      attrs: {
+        "src": item.imgurl,
+        "alt": ""
+      }
+    })])
+  }))]), _vm._v(" "), _c('my-footer')], 1)
 },staticRenderFns: []}
 module.exports.render._withStripped = true
 if (false) {
   module.hot.accept()
   if (module.hot.data) {
-     require("vue-hot-reload-api").rerender("data-v-5d124218", module.exports)
+     require("vue-hot-reload-api").rerender("data-v-d64f0ee8", module.exports)
   }
 }
 
 /***/ }),
 
-/***/ 64:
+/***/ 80:
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(57);
+var content = __webpack_require__(68);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(53)("76c88a48", content, false);
+var update = __webpack_require__(56)("1c027de6", content, false);
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
  if(!content.locals) {
-   module.hot.accept("!!../../node_modules/css-loader/index.js!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-5d124218\",\"scoped\":false,\"hasInlineConfig\":false}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./One.vue", function() {
-     var newContent = require("!!../../node_modules/css-loader/index.js!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-5d124218\",\"scoped\":false,\"hasInlineConfig\":false}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./One.vue");
+   module.hot.accept("!!../../node_modules/css-loader/index.js!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-d64f0ee8\",\"scoped\":false,\"hasInlineConfig\":false}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Showimage.vue", function() {
+     var newContent = require("!!../../node_modules/css-loader/index.js!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-d64f0ee8\",\"scoped\":false,\"hasInlineConfig\":false}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Showimage.vue");
      if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
      update(newContent);
    });
