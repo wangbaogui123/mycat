@@ -35,10 +35,10 @@ body,html{
 }
 .box{
 	width: 98%;
-	margin: .3rem auto;
+	margin: 0 auto;
 	min-height:30rem;
 	height: auto;
-	margin-top:3.3rem;
+	/* margin-top:3.3rem; */
 	padding-bottom: 1rem; 
 }
 .bg-box{

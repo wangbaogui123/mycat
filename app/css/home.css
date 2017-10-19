@@ -7,7 +7,7 @@ transform:translateX(-100%);width:100%;height:auto;display:none}
 .mint-swipe-indicator{width:8px;height:8px;display:inline-block;border-radius:100%;background:#000;opacity:.2;margin:0 3px}
 .mint-swipe-indicator.is-active{background:#fff}
 .my-swipe {
-    height: 20rem;
+    height: 15rem;
     color: #fff;
     font-size: 30px;
     text-align: center;

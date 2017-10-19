@@ -7,6 +7,7 @@ import { Swipe, SwipeItem } from 'vue-swipe'
 import lazyload from './lazyLoad'
 import move from './move'
 import maximg from './showimg'
+import loadimg from './loadimg'
 
 Vue.prototype.$ajax = axios
 
@@ -22,6 +23,7 @@ Vue.use(canvasone);
 Vue.use(lazyload);
 Vue.use(move);
 Vue.use(maximg);
+Vue.use(loadimg);
 
 const routes = routers();
 

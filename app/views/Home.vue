@@ -11,9 +11,9 @@
                         <router-link :to="{ name: 'detail', params: { id: item.id }}"><img v-bind:src="item.imgUrl" ></router-link>
                     </swipe-item>
                 </swipe>      -->
-                <div class="animate-box2" id="movebox">
+                <!-- <div class="animate-box2" id="movebox">
                     <div v-for="item in itemArr" :key="item.$inex" v-move="item"></div>
-                </div>
+                </div> -->
                 <div class="list-box">
                     <ul>
                         <li>
@@ -87,7 +87,8 @@
 
     var homeData = {
             
-            itemArr : []
+            itemArr : [],
+            bannerList : []
             
         }
 
@@ -105,7 +106,7 @@
 				url: './app/data/list.json'
             },function(data){
                 
-                _this.itemArr = data.data.newBanner;
+                _this.bannerList = data.data.banner;
                 
             },function(data){
 
