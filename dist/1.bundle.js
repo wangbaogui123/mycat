@@ -1,18 +1,18 @@
 webpackJsonp([1],{
 
-/***/ 53:
+/***/ 55:
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(78)
+  __webpack_require__(80)
 }
-var Component = __webpack_require__(55)(
+var Component = __webpack_require__(57)(
   /* script */
-  __webpack_require__(63),
+  __webpack_require__(65),
   /* template */
-  __webpack_require__(73),
+  __webpack_require__(75),
   /* styles */
   injectStyle,
   /* scopeId */
@@ -20,13 +20,13 @@ var Component = __webpack_require__(55)(
   /* moduleIdentifier (server only) */
   null
 )
-Component.options.__file = "/Users/wangbaogui/wbg/mycat/app/views/One.vue"
+Component.options.__file = "/Users/mac-fx/wbg/mycat/app/views/One.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key.substr(0, 2) !== "__"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] One.vue: functional components are not supported with templates, they should use render functions.")}
 
 /* hot reload */
 if (false) {(function () {
-  var hotAPI = require("vue-hot-reload-api")
+  var hotAPI = require("vue-loader/node_modules/vue-hot-reload-api")
   hotAPI.install(require("vue"), false)
   if (!hotAPI.compatible) return
   module.hot.accept()
@@ -45,7 +45,7 @@ module.exports = Component.exports
 
 /***/ }),
 
-/***/ 55:
+/***/ 57:
 /***/ (function(module, exports) {
 
 /* globals __VUE_SSR_CONTEXT__ */
@@ -143,7 +143,7 @@ module.exports = function normalizeComponent (
 
 /***/ }),
 
-/***/ 56:
+/***/ 58:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -180,7 +180,7 @@ module.exports = function listToStyles(parentId, list) {
 
 /***/ }),
 
-/***/ 57:
+/***/ 59:
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -199,7 +199,7 @@ if (typeof DEBUG !== 'undefined' && DEBUG) {
   ) }
 }
 
-var listToStyles = __webpack_require__(56)
+var listToStyles = __webpack_require__(58)
 
 /*
 type StyleObject = {
@@ -402,7 +402,7 @@ function applyToTag (styleElement, obj) {
 
 /***/ }),
 
-/***/ 63:
+/***/ 65:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -446,7 +446,7 @@ exports.default = {
 
 /***/ }),
 
-/***/ 66:
+/***/ 68:
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(2)(undefined);
@@ -454,28 +454,28 @@ exports = module.exports = __webpack_require__(2)(undefined);
 
 
 // module
-exports.push([module.i, "\n.onebox{\n    margin:0px;\n    width: 100%;\n    height: 100%;\n    position: fixed;\n    top: 0;\n    right: 0;\n    bottom: 0;\n    left: 0;\n    overflow: hidden;\n    outline: 0;\n    -webkit-overflow-scrolling: touch;\n    background-color:#fff;\n    font-family:'PingFangSC-Medium';\n    font-weight: normal; \n    box-shadow:0 0 5px #fff inset;\n    /* background: #62d8b6; */\n}\n.onebox .logobox{\n    position: relative;\n    z-index: 2;\n    width: 100%;\n    height: auto;\n    background: #fff;\n    padding: 50px 0;\n}\n.onebox .btngo{\n    width: 50%;\n    height: 50px;\n    z-index: 2;\n    position: relative;\n    border-radius:15px;\n    background: #7de8ad;\n    line-height: 50px;\n    margin: 100px auto;\n    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; \n    font-size: 25px;\n    box-shadow: 1px 2px 5px #333;\n}\n.onebox .logobox img{\n    display: block;\n    width: 100%;\n    height: auto;\n    position: relative;\n    z-index: 2;\n}\n.onebox .mov-btn{\n    position: absolute;\n    z-index: 1;\n    background: #fff;\n    bottom:0;\n    left:0;\n    background: url(" + __webpack_require__(71) + ");\n    background-size: 100% 100%; \n    /* width: 20px;\n    height: 20px;\n    border-radius: 10px; */\n}\n.onebox .top{\n    background: rgba(0,0,0,0);\n    color:#fff;\n    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;\n}\n.onebox .top span{\n    float: right;\n    margin-right: 50px;\n    text-shadow: 1px 1px 3px #676767;\n}\n.onebox canvas{\n    position: absolute;\n    top:0;\n    left:0;\n    width: 100%;\n    height: 100%;\n}\n", ""]);
+exports.push([module.i, "\n.onebox{\n    margin:0px;\n    width: 100%;\n    height: 100%;\n    position: fixed;\n    top: 0;\n    right: 0;\n    bottom: 0;\n    left: 0;\n    overflow: hidden;\n    outline: 0;\n    -webkit-overflow-scrolling: touch;\n    background-color:#fff;\n    font-family:'PingFangSC-Medium';\n    font-weight: normal; \n    box-shadow:0 0 5px #fff inset;\n    /* background: #62d8b6; */\n}\n.onebox .logobox{\n    position: relative;\n    z-index: 2;\n    width: 100%;\n    height: auto;\n    background: #fff;\n    padding: 50px 0;\n}\n.onebox .btngo{\n    width: 50%;\n    height: 50px;\n    z-index: 2;\n    position: relative;\n    border-radius:15px;\n    background: #7de8ad;\n    line-height: 50px;\n    margin: 100px auto;\n    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; \n    font-size: 25px;\n    box-shadow: 1px 2px 5px #333;\n}\n.onebox .logobox img{\n    display: block;\n    width: 100%;\n    height: auto;\n    position: relative;\n    z-index: 2;\n}\n.onebox .mov-btn{\n    position: absolute;\n    z-index: 1;\n    background: #fff;\n    bottom:0;\n    left:0;\n    background: url(" + __webpack_require__(73) + ");\n    background-size: 100% 100%; \n    /* width: 20px;\n    height: 20px;\n    border-radius: 10px; */\n}\n.onebox .top{\n    background: rgba(0,0,0,0);\n    color:#fff;\n    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;\n}\n.onebox .top span{\n    float: right;\n    margin-right: 50px;\n    text-shadow: 1px 1px 3px #676767;\n}\n.onebox canvas{\n    position: absolute;\n    top:0;\n    left:0;\n    width: 100%;\n    height: 100%;\n}\n", ""]);
 
 // exports
 
 
 /***/ }),
 
-/***/ 71:
+/***/ 73:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "btnbg.jpeg";
 
 /***/ }),
 
-/***/ 72:
+/***/ 74:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "logo.png";
 
 /***/ }),
 
-/***/ 73:
+/***/ 75:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -493,7 +493,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     staticClass: "logobox"
   }, [_c('img', {
     attrs: {
-      "src": __webpack_require__(72),
+      "src": __webpack_require__(74),
       "alt": ""
     }
   })]) : _vm._e(), _vm._v(" "), (_vm.data.shownum == '0' && _vm.data.time == '0') ? _c('p', {
@@ -504,23 +504,23 @@ module.exports.render._withStripped = true
 if (false) {
   module.hot.accept()
   if (module.hot.data) {
-     require("vue-hot-reload-api").rerender("data-v-5d124218", module.exports)
+     require("vue-loader/node_modules/vue-hot-reload-api").rerender("data-v-5d124218", module.exports)
   }
 }
 
 /***/ }),
 
-/***/ 78:
+/***/ 80:
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(66);
+var content = __webpack_require__(68);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(57)("76c88a48", content, false);
+var update = __webpack_require__(59)("76c88a48", content, false);
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags

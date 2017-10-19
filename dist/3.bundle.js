@@ -1,18 +1,18 @@
 webpackJsonp([3],{
 
-/***/ 51:
+/***/ 53:
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(80)
+  __webpack_require__(82)
 }
-var Component = __webpack_require__(55)(
+var Component = __webpack_require__(57)(
   /* script */
-  __webpack_require__(61),
+  __webpack_require__(63),
   /* template */
-  __webpack_require__(75),
+  __webpack_require__(77),
   /* styles */
   injectStyle,
   /* scopeId */
@@ -20,13 +20,13 @@ var Component = __webpack_require__(55)(
   /* moduleIdentifier (server only) */
   null
 )
-Component.options.__file = "/Users/wangbaogui/wbg/mycat/app/views/Detail.vue"
+Component.options.__file = "/Users/mac-fx/wbg/mycat/app/views/Detail.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key.substr(0, 2) !== "__"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] Detail.vue: functional components are not supported with templates, they should use render functions.")}
 
 /* hot reload */
 if (false) {(function () {
-  var hotAPI = require("vue-hot-reload-api")
+  var hotAPI = require("vue-loader/node_modules/vue-hot-reload-api")
   hotAPI.install(require("vue"), false)
   if (!hotAPI.compatible) return
   module.hot.accept()
@@ -45,7 +45,7 @@ module.exports = Component.exports
 
 /***/ }),
 
-/***/ 55:
+/***/ 57:
 /***/ (function(module, exports) {
 
 /* globals __VUE_SSR_CONTEXT__ */
@@ -143,7 +143,7 @@ module.exports = function normalizeComponent (
 
 /***/ }),
 
-/***/ 56:
+/***/ 58:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -180,7 +180,7 @@ module.exports = function listToStyles(parentId, list) {
 
 /***/ }),
 
-/***/ 57:
+/***/ 59:
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -199,7 +199,7 @@ if (typeof DEBUG !== 'undefined' && DEBUG) {
   ) }
 }
 
-var listToStyles = __webpack_require__(56)
+var listToStyles = __webpack_require__(58)
 
 /*
 type StyleObject = {
@@ -402,7 +402,7 @@ function applyToTag (styleElement, obj) {
 
 /***/ }),
 
-/***/ 58:
+/***/ 60:
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(2)(undefined);
@@ -417,13 +417,13 @@ exports.push([module.i, ".box{padding-bottom:0; box-shadow: 1px 3px 5px #ccc;bac
 
 /***/ }),
 
-/***/ 59:
+/***/ 61:
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(58);
+var content = __webpack_require__(60);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // Prepare cssTransformation
 var transform;
@@ -449,7 +449,7 @@ if(false) {
 
 /***/ }),
 
-/***/ 61:
+/***/ 63:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -520,7 +520,7 @@ Object.defineProperty(exports, "__esModule", {
 //
 
 
-__webpack_require__(59);
+__webpack_require__(61);
 
 var homeData = {
 
@@ -565,7 +565,7 @@ exports.default = {
 
 /***/ }),
 
-/***/ 68:
+/***/ 70:
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(2)(undefined);
@@ -580,7 +580,7 @@ exports.push([module.i, "\n.datail-top{\n    margin: .3rem 0;\n    box-shadow: 0
 
 /***/ }),
 
-/***/ 75:
+/***/ 77:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -621,23 +621,23 @@ module.exports.render._withStripped = true
 if (false) {
   module.hot.accept()
   if (module.hot.data) {
-     require("vue-hot-reload-api").rerender("data-v-6bddedb3", module.exports)
+     require("vue-loader/node_modules/vue-hot-reload-api").rerender("data-v-6bddedb3", module.exports)
   }
 }
 
 /***/ }),
 
-/***/ 80:
+/***/ 82:
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(68);
+var content = __webpack_require__(70);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(57)("2f39b9a8", content, false);
+var update = __webpack_require__(59)("2f39b9a8", content, false);
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
