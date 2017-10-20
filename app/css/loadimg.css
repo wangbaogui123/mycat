@@ -64,24 +64,24 @@
 }
 @-webkit-keyframes maxl {
     0%{
-        transform: scale(1.1);
-        -webkit-transform: scale(1.1);
+        transform: scale(1);
+        -webkit-transform: scale(1);
     }
     20%{
-        transform: scale(1);
-        -webkit-transform: scale(1);
+        transform: scale(1.05);
+        -webkit-transform: scale(1.05);
     }
     40%{
-        transform: scale(.9);
-        -webkit-transform: scale(.9);
-    }
-    60%{
         transform: scale(1);
         -webkit-transform: scale(1);
     }
+    60%{
+        transform: scale(.95);
+        -webkit-transform: scale(.95);
+    }
     80%{
-        transform: scale(1.1);
-        -webkit-transform: scale(1.1);
+        transform: scale(1);
+        -webkit-transform: scale(1);
     }
     100%{
         transform: scale(1);

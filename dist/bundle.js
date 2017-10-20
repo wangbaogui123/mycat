@@ -1795,11 +1795,12 @@ exports.default = function (Vue) {
 
         var li_w = window.innerWidth * 0.98 * 0.48;
         showData(e, data, li_w);
+
         // 滑动加载更多事件
         window.onscroll = function (event) {
             var body_h = document.body.offsetHeight;
             var w_h = window.innerHeight;
-            var scrT = document.documentElement.scrollTop;
+            var scrT = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;;
 
             if (body_h == w_h * 1 + scrT * 1) {
                 showData(e, data, li_w);
@@ -1822,7 +1823,7 @@ exports.default = function (Vue) {
                 li.appendChild(img);
                 eel.appendChild(li);
                 var num = img.width / li_w;
-                //li.setAttribute("class","showanim")
+                li.setAttribute("class", "showanim");
 
                 if (left <= right) {
                     li.setAttribute("style", "left:0;top:" + (left * 1 + 5) + "px");

@@ -39,12 +39,13 @@ export default (Vue , options = {})=>{
                 ];
 
                 let li_w = window.innerWidth*0.98*0.48;
-                showData(e,data,li_w);
+                    showData(e,data,li_w);
+
                 // 滑动加载更多事件
                 window.onscroll = function(event){
                     let body_h = document.body.offsetHeight;
                     let w_h = window.innerHeight;
-                    let scrT = document.documentElement.scrollTop;
+                    let scrT = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;;
 
                     if(body_h == w_h*1 + scrT*1){
                         showData(e,data,li_w)
@@ -68,7 +69,7 @@ export default (Vue , options = {})=>{
                             li.appendChild(img);
                             eel.appendChild(li);
                             let num = img.width/li_w;
-                            //li.setAttribute("class","showanim")
+                            li.setAttribute("class","showanim")
 
                             if(left <= right){
                                 li.setAttribute("style","left:0;top:"+(left*1+5)+"px");
