@@ -10,10 +10,10 @@
                     <swipe-item v-for="item in bannerList" :key="item.$index">
                         <router-link :to="{ name: 'detail', params: { id: item.id }}"><img v-bind:src="item.imgUrl" ></router-link>
                     </swipe-item>
-                </swipe>      -->
-                <!-- <div class="animate-box2" id="movebox">
+                </swipe> -->
+                <div class="animate-box2" id="movebox">
                     <div v-for="item in itemArr" :key="item.$inex" v-move="item"></div>
-                </div> -->
+                </div>
                 <div class="list-box">
                     <ul>
                         <li>
@@ -83,12 +83,17 @@
 
 <script>
 
-    require('../css/home.css')
+    require('../css/home.css');
+    import { Swipe, SwipeItem } from 'vue-swipe';
+
+    Vue.component('swipe', Swipe);
+    Vue.component('swipe-item', SwipeItem);
 
     var homeData = {
             
             itemArr : [],
-            bannerList : []
+            bannerList : [],
+            topshow : false
             
         }
 

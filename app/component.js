@@ -1,8 +1,6 @@
 module.exports = function(Vue){
 
-	let data = {
-		page:"我的萌宠"
-	}
+	require('./css/top.css');
 
 	let toptpl = require("./tpl/top.html");
 
@@ -10,15 +8,18 @@ module.exports = function(Vue){
 	Vue.component("my-top",{
 
 		props:{
-			topShow:[]
+			topShow:Boolean
 		},
 		template: toptpl,
 	  	data:function(){
-	  		return data;
+	  		return {
+				pageName: "我的萌宠",
+				topshow: this.topShow
+			}
 		},
 		methods:{
-		  	topFun:function(){  
-		  		this.topShow = !this.topShow;
+		  	topFun: function(){  
+		  		this.topshow = !this.topshow;
 		  	}
 		}
 	})

@@ -4,9 +4,6 @@ const path = require('path');
 const config = {
   entry: './app/app.js',
   output: {
-    // path: path.resolve(__dirname, 'dist'),
-    // filename: 'bundle.js',
-    // publicPath: "./dist/"
     path: path.resolve(__dirname, 'dist'),
     publicPath: "/dist/",
     filename: 'bundle.js',
@@ -47,11 +44,6 @@ const config = {
       }
 
     ]
-  },
-  resolve: {
-    alias: {
-      'vue$': 'vue/dist/vue.esm.js'
-    }
   },
   devServer: {
     historyApiFallback: true,
